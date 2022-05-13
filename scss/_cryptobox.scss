@@ -1,0 +1,78 @@
+.cryptobox {
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    align-self: center;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  &__desc {
+    margin-bottom: 65px;
+    max-width: 430px;
+    text-align: center;
+    align-self: center;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px 130px;
+
+    @media screen and (max-width: 1200px) {
+      gap: 72px 20px;
+      justify-content: space-around;
+    }
+
+    @media screen and (max-width: 768px) {
+      overflow-x: scroll;
+      justify-content: start;
+      flex-wrap: nowrap;
+      gap: 35px;
+      padding: 90px 0 40px;
+    }
+  }
+
+  &-modal {
+    .modal-item {
+      padding: 60px 30px 30px;
+    }
+
+    .modal-item__caption {
+      margin-bottom: 30px;
+    }
+
+    .modal-item__image {
+      img {
+        margin-top: 0;
+        flex-grow: 0;
+        min-width: 345px;
+        max-width: 495px;
+        filter: drop-shadow(0px 4.91096px 30px rgba(0, 251, 191, 0.63));
+        border-radius: 15px;
+
+        @media screen and (max-width: 991px) {
+          min-width: 275px;
+        }
+
+        @media screen and (max-width: 475px) {
+          min-width: 220px;
+        }
+      }
+    }
+  }
+}

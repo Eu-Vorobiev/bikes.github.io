@@ -1,0 +1,204 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  ::selection,
+  ::-moz-selection {
+    background-color: $green;
+    color: white;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: $green $black;
+
+  ::-webkit-scrollbar {
+    width: .6rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $green;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $content-font;
+  background: $black url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-position: right 37% top -320px;
+  background-size: auto;
+  color: #fff;
+  min-height: 100vh;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+
+  &.page {
+    @include pageFlex;
+  }
+}
+
+main {
+  padding-top: 120px;
+  flex: 1 0 auto;
+  position: relative;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+span {
+  display: inline-flex;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-flex;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: $transition;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  transition: $transition;
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section:first-child {
+  padding-top: 40px;
+}
+
+section.content-section {
+  padding-top: 66px;
+}
+
+h1 {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: clamp(rem(36), 7vw, rem(80.4));
+  line-height: divider(65px, 80.492px);
+  color: $white;
+}
+
+h2 {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: clamp(rem(26), 4vw, rem(31.2));
+  line-height: divider(31px, 31.1975px);
+  color: $white;
+}
+
+h3 {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: clamp(rem(24), 4vw, rem(29.07));
+  line-height: divider(24px, 29.0763px);
+  color: $white;
+}
+
+.caption {
+  font-family: $content-font;
+  font-weight: 700;
+  font-size: rem(14.2045);
+  line-height: divider(17px, 14.2045px);
+  text-transform: uppercase;
+  color: $white;
+}
+
+.content-text {
+  font-family: $content-font;
+  font-weight: 300;
+  font-size: rem(11.1023);
+  line-height: divider(14px, 11.1023px);
+  color: $white;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.logo {
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 7;
+  background: rgba(black, .7);
+  transition: $transition;
+  opacity: 0;
+  transform: translateY(100%);
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+
+    @media screen and (max-width: 475px) {
+      opacity: 0;
+    }
+  }
+}

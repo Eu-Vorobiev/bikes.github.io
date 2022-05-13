@@ -1,0 +1,139 @@
+.latest-operations {
+  min-height: 300px;
+  padding: 30px 22px 55px;
+  // border-radius: 0px 6px 0 0;
+  display: flex;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    background: rgba(#7049E0, .3);
+    border: 1px solid #00FBCE;
+    width: 100vw;
+    height: 100%;
+
+    @supports ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+      background: linear-gradient(4.65deg, rgba(70, 5, 255, 0.46) 0%, rgba(111, 111, 111, 0) 51.45%, rgba(70, 5, 255, 0.4) 99.79%);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+  }
+
+  &__wrap {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-family: $title-font;
+    font-size: rem(29);
+    line-height: divider(24px, 29px);
+    color: #00FFD1;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 10px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    &-user {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-icon {
+      width: 23px;
+      height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("../img/icons/user.svg"), $violetGradient;
+      background-repeat: no-repeat;
+      background-size: 10px 11px, cover;
+      background-position: center;
+      box-shadow: 0px 3px 38px transparent;
+      border-radius: 4px 0;
+
+      @media (any-hover: hover) {
+
+        &:hover,
+        &:focus {
+          box-shadow: 0px 3px 38px #4605FF;
+        }
+      }
+    }
+
+    &-name {
+      font-weight: 400;
+      font-size: rem(4);
+      line-height: 1.1;
+      color: $white;
+
+      h4 {
+        font-family: $title-font;
+        font-weight: 400;
+        font-size: rem(8.3);
+        line-height: divider(7px, 8px);
+        color: $white;
+      }
+    }
+
+    &-date {
+      font-size: 4.00924px;
+      line-height: 5px;
+      color: $white;
+    }
+  }
+
+  &__btn {
+    &-wrap {
+      display: flex;
+      flex-grow: 1;
+      filter: drop-shadow(0px 0px 6px $darkViolet);
+    }
+
+    padding: 15px 55px;
+    color: $white;
+    background: rgba($black, .9);
+    border: 1px solid $darkViolet;
+    clip-path: polygon(0% 7px,
+      7px 0%,
+      100% 0%,
+      100% 7px,
+      100% calc(100% - 7px),
+      calc(100% - 7px) 100%,
+      7px 100%,
+      0 100%);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $black;
+        background: linear-gradient(to top, $white);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'BIGMACCA';
+    src: url('BIGMACCA.eot');
+    src: url('BIGMACCA.eot?#iefix') format('embedded-opentype'),
+        url('BIGMACCA.woff2') format('woff2'),
+        url('BIGMACCA.woff') format('woff'),
+        url('BIGMACCA.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

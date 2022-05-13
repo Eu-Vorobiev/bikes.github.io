@@ -1,0 +1,100 @@
+select {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.custom-dropdown {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  vertical-align: middle;
+
+  .shadow {
+    display: flex;
+    flex-grow: 1;
+    filter: drop-shadow(0px 0px 6px $darkViolet);
+  }
+
+  &.mt {
+    margin-top: 10px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    background-image: url("../img/icons/arrow-left.svg");
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    height: 14px;
+    width: 14px;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: $transition;
+  }
+
+  &:hover {
+    &::after {
+      transform: rotate(-90deg) translateX(-3px);
+    }
+  }
+}
+
+.custom-dropdown select {
+  width: 100%;
+  cursor: pointer;
+  background: rgba($black, .9);
+  border: 1px solid $darkViolet;
+  clip-path: polygon(0% 7px,
+      7px 0%,
+      100% 0%,
+      100% 7px,
+      100% calc(100% - 7px),
+      calc(100% - 7px) 100%,
+      7px 100%,
+      0 100%);
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: divider(17px, 14px);
+  text-transform: uppercase;
+  color: $white;
+  padding: 12px 18px;
+  border: 1px solid $darkViolet;
+  margin: 0 4px;
+  text-overflow: '';
+  -webkit-appearance: none;
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0, 0, 0, .3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0, 0, 0, .1);
+}
+
+
+option {
+  font-weight: 700;
+  font-size: rem(12);
+  line-height: divider(17px, 12px);
+  text-transform: uppercase;
+  color: $white;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 1px solid $darkViolet;
+  padding: 5px 8px;
+  color: inherit;
+  background-color: $darkViolet;
+}

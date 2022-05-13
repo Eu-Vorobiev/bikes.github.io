@@ -1,0 +1,52 @@
+.swiper {
+  &-buttons {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: rem(30);
+
+    @media screen and (max-width: 991px) {
+      bottom: 40px;
+    }
+
+    @media screen and (max-width: 575px) {
+      display: none;
+    }
+
+  }
+
+  &-button-prev,
+  &-button-next {
+    position: static;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #DEDEDE;
+    background-color: #F8F8F8;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/icons/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+
+    &::after {
+      display: none;
+    }
+
+    &:not(:disabled):hover {
+      background-color: darken(#F8F8F8, 5%);
+    }
+  }
+
+  &-prev {
+    transform: rotate(180deg);
+  }
+
+}

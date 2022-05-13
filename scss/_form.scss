@@ -1,0 +1,154 @@
+.form {
+  &__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    background: white;
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: rem(7);
+    padding: 20px;
+    font-weight: 400;
+    font-size: clamp(rem(16), 4vw, rem(20));
+    line-height: divider(23, 20);
+    color: black;
+    transition: $transition;
+
+    @media screen and (max-width: 575px) {
+      padding: 16px;
+    }
+
+    &::placeholder {
+      font-weight: 300;
+      font-size: clamp(rem(16), 4vw, rem(20));
+      line-height: divider(23, 20);
+      text-transform: capitalize;
+      color: #585858;
+    }
+
+    &:hover {
+      background: darken(white, 5%);
+    }
+
+    &:focus {
+      border: 1px solid red;
+
+      &::placeholder {
+        color: red;
+      }
+    }
+
+    &:focus-within {
+      color: red;
+      border: 1px solid red;
+      background: darken(white, 5%);
+
+      &::placeholder {
+        color: red;
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    appearance: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    background: white;
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: rem(7);
+    padding: 20px;
+    font-weight: 300;
+    font-size: clamp(rem(16), 4vw, rem(20));
+    line-height: divider(23, 20);
+    color: rgba(#585858, 1);
+    transition: $transition;
+    position: relative;
+
+    @media screen and (max-width: 575px) {
+      padding: 16px;
+    }
+
+    &:hover {
+      background: darken(white, 5%);
+    }
+
+    &:focus {
+      border: 1px solid red;
+
+      &::placeholder {
+        color: red;
+      }
+    }
+
+    &:focus-within {
+      color: red;
+      border: 1px solid red;
+      background: darken(white, 5%);
+
+      &::placeholder {
+        color: red;
+      }
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &-item {
+      cursor: pointer;
+      font-weight: 400;
+      font-size: clamp(rem(16), 4vw, rem(20));
+      line-height: divider(23, 20);
+      color: black;
+      transition: all .3s linear;
+      position: relative;
+
+      @media (max-width: 768px) {
+        margin-left: 20px;
+      }
+
+      &.active {
+        color: red;
+        border-bottom-color: red;
+        font-weight: bold;
+      }
+
+
+      &:hover {
+        border-bottom: 1px dashed transparent;
+
+        &.active {
+          border-bottom-color: red;
+        }
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/contact/arrow-down-check.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    display: block;
+    pointer-events: none;
+  }
+
+}

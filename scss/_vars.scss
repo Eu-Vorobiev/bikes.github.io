@@ -1,0 +1,43 @@
+// Colors
+$green: #00FFD1;
+$black: #1B1B1B;
+$dark: #0F0F0F;
+$darkViolet: #4605FF;
+$white: #fff;
+$accentGreen: linear-gradient(-252.66deg, #00FBCE 3.58%, #00FB83 89.26%);
+$greenGradient: linear-gradient(-90.95deg, #18B126 0.42%, #2AD746 99.08%);
+$blueGradient: linear-gradient(-90deg, #04B9BE 6.8%, #32D9BB 95.39%);
+$whiteRedGradient: linear-gradient(-252.66deg, #FF97B0 3.58%, #D50A0A 89.26%);
+$redGradient: linear-gradient(-90deg, #D20000 -0.07%, #FF0000 99.89%);
+$orangeGradient: linear-gradient(-93.08deg, #FF5805 6.99%, #FFB38D 104.67%);
+$whiteGradient: linear-gradient(-91.08deg, #D6D6D6 -0.61%, #FFFFFF 106.01%);
+$violetGradient: linear-gradient(-252.88deg, #A149E0 3.97%, #7049E0 96.41%);
+$transparentGradient: linear-gradient(135deg, transparent 0%, rgba($darkViolet, 1) 4px, rgba($dark, .9) 4%),
+linear-gradient(-45deg, transparent 0%, rgba($darkViolet, 1) 3px, rgba($dark, .9) 1%);
+// Visual
+$transition: all .3s ease-in-out;
+// Border
+$borderCut: 5px;
+// Fonts 
+$title-font: "BIGMACCA",
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+'Open Sans',
+'Helvetica Neue',
+sans-serif;
+$content-font: "Montserrat",
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+'Open Sans',
+'Helvetica Neue',
+sans-serif;

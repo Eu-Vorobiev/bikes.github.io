@@ -1,0 +1,185 @@
+.white-red {
+  svg path {
+    stroke: #C60C2E;
+  }
+
+  svg path:last-child {
+    fill: #C60C2E;
+  }
+
+  img {
+    filter: drop-shadow(0px 4.91096px 30px #E40911);
+  }
+
+  .crypto-item__inner {
+    background: linear-gradient(119.41deg, rgba(255, 255, 255, 0.37) 0%, rgba(111, 111, 111, 0) 52.13%, rgba(217, 20, 20, 0.61) 101.11%);
+    border: 0.61387px solid #C60C2E;
+
+    button {
+      background: $whiteRedGradient;
+    }
+  }
+}
+
+.blue {
+  svg path {
+    stroke: #00FBCE;
+  }
+
+  svg path:last-child {
+    fill: #00FBCE;
+  }
+
+  img {
+    filter: drop-shadow(0px 4.91096px 30px rgba(0, 251, 191, 0.63));
+  }
+
+  .crypto-item__inner {
+    background: linear-gradient(119.41deg, rgba(0, 255, 148, 0.37) 0%, rgba(111, 111, 111, 0) 52.13%, rgba(2, 240, 255, 0.32) 101.11%);
+    border: 0.61387px solid #00FBCE;
+
+    button {
+      background: $blueGradient;
+    }
+  }
+}
+
+.orange {
+  svg path {
+    stroke: #FF5805;
+  }
+
+  svg path:last-child {
+    fill: #FF5805;
+  }
+
+  img {
+    filter: drop-shadow(0px 4.91096px 30px #E55E22);
+  }
+
+  .crypto-item__inner {
+    background: linear-gradient(119.41deg, #F9B88B 0%, rgba(234, 171, 149, 0.15) 52.13%, #E25605 101.11%);
+    border: 0.61387px solid #FF5805;
+
+    button {
+      background: $orangeGradient;
+    }
+  }
+}
+
+.green {
+  svg path {
+    stroke: #03ED27;
+  }
+
+  svg path:last-child {
+    fill: #03ED27;
+  }
+
+  img {
+    filter: drop-shadow(0px 4.91096px 30px #02EF27);
+  }
+
+  .crypto-item__inner {
+    background: linear-gradient(119.41deg, #41D558 0%, rgba(111, 111, 111, 0) 52.13%, rgba(29, 138, 27, 0.59) 101.11%);
+    border: 0.61387px solid #03ED27;
+
+    button {
+      background: $greenGradient;
+    }
+  }
+}
+
+.white {
+  svg path {
+    stroke: #FFF;
+  }
+
+  svg path:last-child {
+    fill: #FFF;
+  }
+
+  img {
+    filter: drop-shadow(0px 4.91096px 30px rgba(255, 255, 255, 0.63));
+  }
+
+  .crypto-item__inner {
+    background: linear-gradient(119.41deg, rgba(255, 255, 255, 0.37) 0%, rgba(111, 111, 111, 0) 52.13%, rgba(255, 255, 255, 0.32) 101.11%);
+    border: 0.61387px solid #FFFFFF;
+
+    button {
+      background: $whiteGradient;
+    }
+  }
+}
+
+.red {
+  svg path {
+    stroke: #FB0000;
+  }
+
+  svg path:last-child {
+    fill: #FB0000;
+  }
+
+  img {
+    filter: drop-shadow(0px 4.91096px 30px #FF0000);
+  }
+
+  .crypto-item__inner {
+    background: linear-gradient(119.41deg, rgba(255, 5, 5, 0.37) 0%, rgba(111, 111, 111, 0) 52.13%, rgba(255, 5, 5, 0.32) 101.11%);
+    border: 0.61387px solid #FB0000;
+
+    button {
+      background: $redGradient;
+    }
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media screen and (max-width: 360px) {
+    gap: 8px;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: rem(13);
+    line-height: 1;
+    color: $white;
+    background: $violetGradient;
+    border-radius: 4px 0;
+    box-shadow: 0px 2.89537px 20px transparent;
+
+    @media screen and (max-width: 360px) {
+      width: 22px;
+      height: 22px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 2.89537px 20px #8A49E0;
+    }
+  }
+
+  span {
+    font-weight: 800;
+    font-size: rem(13);
+    line-height: 130.9%;
+    color: $white;
+    min-width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
