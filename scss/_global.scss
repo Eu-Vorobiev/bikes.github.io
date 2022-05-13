@@ -185,7 +185,7 @@ h3 {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 7;
+  z-index: 5;
   background: rgba(black, .7);
   transition: $transition;
   opacity: 0;
@@ -199,6 +199,12 @@ h3 {
 
     @media screen and (max-width: 475px) {
       opacity: 0;
+    }
+  }
+
+  &.active.filter-page {
+    @media screen and (max-width: 475px) {
+      opacity: 1;
     }
   }
 }

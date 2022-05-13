@@ -73,6 +73,10 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, auto));
       justify-content: space-between;
       gap: 20px 10px;
+
+      @media screen and (max-width: 800px) {
+        justify-content: space-evenly;
+      }
     }
   }
 
@@ -149,6 +153,9 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, auto));
       justify-content: space-between;
       gap: 20px 10px;
+      @media screen and (max-width: 800px) {
+        justify-content: space-evenly;
+      }
     }
   }
 }

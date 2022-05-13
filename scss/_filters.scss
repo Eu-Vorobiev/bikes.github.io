@@ -4,6 +4,13 @@
   // border-radius: 0px 6px 0 0;
   display: flex;
   position: relative;
+  transition: $transition;
+
+  @media screen and (max-width: 1150px) {
+    justify-content: start;
+    padding: 30px 30px 35px 25px;
+  }
+
 
   &::before {
     content: '';
@@ -22,6 +29,11 @@
       -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
     }
+
+    @media screen and (max-width: 1150px) {
+      left: 0;
+      right: unset;
+    }
   }
 
   &__wrap {
@@ -29,6 +41,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 1150px) {
+      max-width: 280px;
+    }
+
+    @media screen and (max-width: 375px) {
+      max-width: 250px;
+    }
   }
 
   &__title {

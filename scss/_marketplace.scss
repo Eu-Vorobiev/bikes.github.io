@@ -1,40 +1,132 @@
 .marketplace {
   margin-bottom: 60px;
+  position: relative;
+
+  @media screen and (max-width: 1150px) {
+    overflow: hidden;
+  }
 
   &__container {
     display: flex;
     justify-content: flex-end;
   }
 
+  &-aside {
+    &__btn {
+      display: none;
+
+      width: 120px;
+      position: absolute;
+      top: 3px;
+      right: 15px;
+      z-index: 7;
+      padding: 15px 55px;
+      color: $white;
+      background: $transparentGradient;
+      border: 1px solid $darkViolet;
+      clip-path: polygon(0% 7px,
+          7px 0%,
+          100% 0%,
+          100% 7px,
+          100% calc(100% - 7px),
+          calc(100% - 7px) 100%,
+          7px 100%,
+          0 100%);
+
+      // &.absolute {
+      //   position: absolute;
+      //   top: 123px;
+
+      //   @media screen and (max-width: 480px) {
+      //     top: 120px;
+      //   }
+      // }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $black;
+          background: linear-gradient(to top, $white);
+        }
+      }
+
+      @media screen and (max-width: 1150px) {
+        display: inline-flex;
+        right: -55px;
+
+        &:hover,
+        &:focus-visible{
+          color: $black;
+          background: linear-gradient(to top, $white);
+          right: 15px;
+        }
+      }
+    }
+  }
+
   &__aside {
     position: absolute;
-    top: 158px;
-    left: 80px;
-    // right: 930px;
-    // сделать кальком
-    z-index: 5;
-    // max-width: 100vw;
-    // width: 100%;
+    top: 38px;
+    left: calc((100vw - 1190px) / 2 - 10px);
+    z-index: 7;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: $transition;
+
+    @media screen and (max-width: 1200px) {
+      left: 0;
+    }
+
+    @media screen and (max-width: 1150px) {
+      position: absolute;
+      top: 60px;
+      left: unset;
+      right: -100%;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &.active {
+      right: 0;
+      left: unset;
+      opacity: 1;
+      visibility: visible;
+
+      @media screen and (max-width: 375px) {
+        right: -10px;
+      }
+    }
   }
 
   &__tab {
     max-width: 755px;
     width: 100%;
+
+    @media screen and (max-width: 1150px) {
+      max-width: 100%;
+      margin-top: 15px;
+    }
   }
 
   &__header {
     display: flex;
     align-items: flex-start;
+
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__desc {
     margin-left: auto;
     text-align: left;
     max-width: 325px;
+
+    @media screen and (max-width: 767px) {
+      margin-left: 0;
+      max-width: 700px;
+    }
   }
 }

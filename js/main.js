@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let overlay = document.querySelector(".overlay");
   let header = document.querySelector(".header");
   let filterBtn = document.querySelectorAll(".accordion__btn");
+  let asideBtn = document.querySelector("#aside-btn");
+  let aside = document.querySelector(".marketplace__aside");
 
   menuBtn.addEventListener("click", function () {
     this.classList.toggle("active");
@@ -20,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
       disableScroll();
     } else {
       enableScroll();
+    }
+    if (aside && aside.classList.contains("active")) {
+      aside.classList.remove("active");
+      overlay.classList.add("active");
     }
   });
 
@@ -59,6 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     };
+  }
+
+  // Show filters marketplace
+  if (aside) {
+    asideBtn.addEventListener("click", function () {
+      aside.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
   }
 
   // Counter

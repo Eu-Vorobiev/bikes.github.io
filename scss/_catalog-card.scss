@@ -12,6 +12,18 @@
     }
   }
 
+  @media screen and (max-width: 800px) {
+    &:not(:nth-child(-n+12)) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 519px) {
+    &:not(:nth-child(-n+6)) {
+      display: none;
+    }
+  }
+
   &.operations {
     width: 140px;
 

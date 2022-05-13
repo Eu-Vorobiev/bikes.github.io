@@ -1,6 +1,6 @@
 .modal {
-  position: fixed;
-  z-index: 5;
+  position: absolute;
+  z-index: 7;
   right: 0;
   left: 0;
   min-height: calc(100vh - 113px);
