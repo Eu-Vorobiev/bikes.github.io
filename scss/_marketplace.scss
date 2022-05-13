@@ -53,8 +53,7 @@
         display: inline-flex;
         right: -55px;
 
-        &:hover,
-        &:focus-visible{
+        &:hover{
           color: $black;
           background: linear-gradient(to top, $white);
           right: 15px;
