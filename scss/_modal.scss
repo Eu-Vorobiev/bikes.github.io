@@ -39,7 +39,9 @@
     }
 
     .modal__container {
-      padding: 3% -15px;
+      padding: 10px 15px 10px;
+      display: flex;
+      align-items: center;
     }
 
     .modal-item__details {
@@ -48,6 +50,10 @@
 
     .modal-item__info {
       margin-left: 12px;
+
+      @media screen and (max-width: 420px) and (max-height: 760px) {
+        display: none;
+      }
     }
   }
 
@@ -62,9 +68,11 @@
   }
 
   &__container {
-    padding: 5px 15px 0px;
+    // padding: 5px 15px 0px;
+    // align-items: flex-start;
+    padding: 10px 15px 10px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &-layer {
@@ -143,6 +151,10 @@
       padding: 50px 10px 30px;
     }
 
+    @media screen and (max-width: 420px) and (max-height: 890px) {
+      gap: 20px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -153,6 +165,10 @@
       z-index: 2;
       width: 67px;
       height: 66px;
+
+      @media screen and (max-width: 420px) and (max-height: 700px) {
+        display: none;
+      }
     }
 
     &::after {
@@ -179,6 +195,14 @@
 
         @media screen and (max-width: 991px) {
           min-width: 275px;
+          margin-top: 0;
+        }
+
+        @media screen and (max-width: 420px) and (max-height: 740px) {
+          min-width: 240px;
+          max-height: 180px;
+          flex-grow: 0;
+          margin: 0 auto;
         }
       }
     }
@@ -187,6 +211,11 @@
       display: flex;
       flex-direction: column;
       align-items: start;
+      justify-self: center;
+
+      @media screen and (max-width: 475px) {
+        justify-self: initial;
+      }
     }
 
     &__id {
@@ -197,6 +226,10 @@
       font-size: rem(13.0432);
       line-height: divider(16px, 13.0432px);
       color: $white;
+
+      @media screen and (max-width: 420px) and (max-height: 890px) {
+        display: none;
+      }
     }
 
     &__caption {
@@ -239,6 +272,11 @@
         padding: 15px 10px;
       }
 
+      @media screen and (max-width: 420px) and (max-height: 800px) {
+        padding: 10px;
+      }
+
+
       p {
         margin: 3px 0;
         font-weight: 600;
@@ -257,6 +295,10 @@
 
     .catalog-card__info {
       margin-bottom: 12px;
+
+      @media screen and (max-width: 420px) and (max-height: 800px) {
+        margin-bottom: 0;
+      }
 
       p {
         font-size: rem(13);
@@ -302,6 +344,10 @@
       @media screen and (max-width: 420px) {
         margin-top: 5px;
       }
+
+      @media screen and (max-width: 420px) and (max-height: 800px) {
+        display: none;
+      }
     }
 
     &__availiable {
@@ -321,6 +367,10 @@
 
       @media screen and (max-width: 475px) {
         gap: 4px 8px;
+      }
+
+      @media screen and (max-width: 420px) and (max-height: 870px) {
+        display: none;
       }
     }
 

@@ -83,14 +83,24 @@
 
   <main class="main">
 
-    <section class="cryptobox">
-      <div class="container cryptobox__container">
-        <h1 class="cryptobox__title">Cryptobox</h1>
-        <p class="cryptobox__desc content-text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit
-          officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-        <div class="cryptobox__wrap">
-          <article class="crypto-item white-red">
+    <section class="staking content-section">
+      <div class="container staking__container">
+        <h1 class="staking__title">About staking</h1>
+        <p class="staking__desc content-text">Staking is a way for us to reward our community members for having a long
+          term mindset and locking up their MTB tokens. Also during the staking you will have prize from our team, as a
+          Crypto Box. By staking your MTB you’ll be able to earn MTB rewards when you lock up your tokens through the
+          staking dashboard. In the future, staking MTB will give you voting rights and a say over the use of the
+          community treasury .
+        </p>
+        <div class="staking__wrap">
+          <svg class="move-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21.9988 43C17.2728 41.233 13.3308 35.185 11.3588 31.643C10.5068 30.113 10.9558 28.235 12.3228 27.141C13.0588 26.5525 13.9859 26.256 14.9268 26.3082C15.8678 26.3604 16.7564 26.7577 17.4228 27.424L18.9988 29V17.5C18.9988 16.837 19.2622 16.2011 19.731 15.7322C20.1998 15.2634 20.8357 15 21.4988 15C22.1618 15 22.7977 15.2634 23.2665 15.7322C23.7354 16.2011 23.9988 16.837 23.9988 17.5V23.5C23.9988 22.837 24.2622 22.2011 24.731 21.7322C25.1998 21.2634 25.8357 21 26.4988 21C27.1618 21 27.7977 21.2634 28.2665 21.7322C28.7354 22.2011 28.9988 22.837 28.9988 23.5V25.5C28.9988 24.837 29.2622 24.2011 29.731 23.7322C30.1998 23.2634 30.8357 23 31.4988 23C32.1618 23 32.7977 23.2634 33.2665 23.7322C33.7354 24.2011 33.9988 24.837 33.9988 25.5V27.5C33.9988 26.837 34.2622 26.2011 34.731 25.7322C35.1998 25.2634 35.8357 25 36.4988 25C37.1618 25 37.7977 25.2634 38.2665 25.7322C38.7354 26.2011 38.9988 26.837 38.9988 27.5V35.368C38.9988 36.438 38.7338 37.496 38.1168 38.371C37.0938 39.82 35.2538 42.034 32.9988 43C29.4988 44.5 26.3688 44.634 21.9988 43Z"
+              stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M28 4L32 8L28 12M10 8H32H10ZM14 12L10 8L14 4V12Z" stroke="black" stroke-width="4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <div class="staking__item">
             <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323" stroke="#C60C2E"
@@ -103,16 +113,25 @@
                 stroke-width="1.84161" />
               <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#C60C2E" />
             </svg>
-            <img src="img/item.png" alt="crypto item">
-            <div class="crypto-item__inner">
-              <h2 class="crypto-item__title">Cryptobox silver</h2>
-              <div class="crypto-item__btn-wrap">
-                <button class="btn crypto-item__btn">Learn more</button>
-              </div>
+            <div class="staking__item-inner">
+              <h1 class="staking__item-number">1<span>st</span></h1>
+              <div class="staking__item-contract">contract<br>
+                for 6 months - <span>3%</span></div>
+              <label class="staking__item-invest" for="invest">
+                your investment
+                <input class="range staking__item-range" type="range" value="5.0" min="0.1" max="10.0" id="invest"
+                  step="0.1" oninput="rangevalue.value=value" />
+                <span>
+                  <input class="range-value" type="text" id="rangevalue" value="5.0" oninput="range.value=value">
+                  bnb
+                </span>
+              </label>
             </div>
-          </article>
-          <!-- /.crypto-item -->
-          <article class="crypto-item blue">
+            <div class="staking__item-btnWrap">
+              <button class="btn staking__item-btn">Invest</button>
+            </div>
+          </div>
+          <div class="staking__item">
             <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323" stroke="#C60C2E"
@@ -125,16 +144,25 @@
                 stroke-width="1.84161" />
               <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#C60C2E" />
             </svg>
-            <img src="img/item.png" alt="crypto item">
-            <div class="crypto-item__inner">
-              <h2 class="crypto-item__title">Cryptobox silver</h2>
-              <div class="crypto-item__btn-wrap">
-                <button class="btn crypto-item__btn">Learn more</button>
-              </div>
+            <div class="staking__item-inner">
+              <h1 class="staking__item-number">2<span>nd</span></h1>
+              <div class="staking__item-contract">contract<br>
+                for 18 months - <span>6%</span></div>
+              <label class="staking__item-invest" for="invest">
+                your investment
+                <input class="range staking__item-range" type="range" value="5.0" min="0.1" max="10.0" id="invest"
+                  step="0.1" oninput="rangevalue.value=value" />
+                <span>
+                  <input class="range-value" type="text" id="rangevalue" value="5.0" oninput="range.value=value">
+                  bnb
+                </span>
+              </label>
             </div>
-          </article>
-          <!-- /.crypto-item -->
-          <article class="crypto-item orange">
+            <div class="staking__item-btnWrap">
+              <button class="btn staking__item-btn">Invest</button>
+            </div>
+          </div>
+          <div class="staking__item">
             <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323" stroke="#C60C2E"
@@ -147,87 +175,29 @@
                 stroke-width="1.84161" />
               <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#C60C2E" />
             </svg>
-            <img src="img/item.png" alt="crypto item">
-            <div class="crypto-item__inner">
-              <h2 class="crypto-item__title">Cryptobox silver</h2>
-              <div class="crypto-item__btn-wrap">
-                <button class="btn crypto-item__btn">Learn more</button>
-              </div>
+            <div class="staking__item-inner">
+              <h1 class="staking__item-number">3<span>rd</span></h1>
+              <div class="staking__item-contract">contract<br>
+                for 36 months - <span>10%</span></div>
+              <label class="staking__item-invest" for="invest">
+                your investment
+                <input class="range staking__item-range" type="range" value="5.0" min="0.1" max="10.0" id="invest"
+                  step="0.1" oninput="rangevalue.value=value" />
+                <span>
+                  <input class="range-value" type="text" id="rangevalue" value="5.0" oninput="range.value=value">
+                  bnb
+                </span>
+              </label>
             </div>
-          </article>
-          <!-- /.crypto-item -->
-          <article class="crypto-item green">
-            <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323" stroke="#C60C2E"
-                stroke-width="1.84161" />
-              <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#C60C2E" />
-            </svg>
-            <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#C60C2E"
-                stroke-width="1.84161" />
-              <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#C60C2E" />
-            </svg>
-            <img src="img/item.png" alt="crypto item">
-            <div class="crypto-item__inner">
-              <h2 class="crypto-item__title">Cryptobox silver</h2>
-              <div class="crypto-item__btn-wrap">
-                <button class="btn crypto-item__btn">Learn more</button>
-              </div>
+            <div class="staking__item-btnWrap">
+              <button class="btn staking__item-btn">Invest</button>
             </div>
-          </article>
-          <!-- /.crypto-item -->
-          <article class="crypto-item white">
-            <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323" stroke="#C60C2E"
-                stroke-width="1.84161" />
-              <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#C60C2E" />
-            </svg>
-            <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#C60C2E"
-                stroke-width="1.84161" />
-              <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#C60C2E" />
-            </svg>
-            <img src="img/item.png" alt="crypto item">
-            <div class="crypto-item__inner">
-              <h2 class="crypto-item__title">Cryptobox silver</h2>
-              <div class="crypto-item__btn-wrap">
-                <button class="btn crypto-item__btn">Learn more</button>
-              </div>
-            </div>
-          </article>
-          <!-- /.crypto-item -->
-          <article class="crypto-item red">
-            <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323" stroke="#C60C2E"
-                stroke-width="1.84161" />
-              <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#C60C2E" />
-            </svg>
-            <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#C60C2E"
-                stroke-width="1.84161" />
-              <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#C60C2E" />
-            </svg>
-            <img src="img/item.png" alt="crypto item">
-            <div class="crypto-item__inner">
-              <h2 class="crypto-item__title">Cryptobox silver</h2>
-              <div class="crypto-item__btn-wrap">
-                <button class="btn crypto-item__btn">Learn more</button>
-              </div>
-            </div>
-          </article>
-          <!-- /.crypto-item -->
+          </div>
         </div>
       </div>
-      <!-- /.container cryptobox__container -->
+      <!-- /.container staking__container -->
     </section>
-    <!-- /.cryptobox -->
-
+    <!-- /.staking -->
 
   </main>
   <!-- /.main -->

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketplace</title>
+  <title>Profile</title>
 
   <link rel="stylesheet" href="fonts/BigMacca/stylesheet.css" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
             <div class="shadow"></div>
             <a class="nav__link" href="index.html">Cryptobox</a>
           </li>
-          <li class="nav__item active">
+          <li class="nav__item">
             <div class="shadow"></div>
             <a class="nav__link" href="marketplace.html">Marketplace</a>
           </li>
@@ -54,13 +54,13 @@
             <p class="content-text">Balance</p>
             <b><span>000.233</span>coin</b>
           </div>
-          <a class="wallet__lvl" href="profile.html">
+          <a class="wallet__lvl active" href="profile.html">
             <p class="content-text">lvl</p>
             <b>7</b>
           </a>
         </div>
         <!-- /.wallet header__wallet -->
-        <a class="account header__account" href="profile.html">
+        <a class="account header__account active" href="profile.html">
           <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M10 11C12.7614 11 15 8.76142 15 6C15 3.23858 12.7614 1 10 1C7.23858 1 5 3.23858 5 6C5 8.76142 7.23858 11 10 11Z"
@@ -88,408 +88,6 @@
     <section class="marketplace">
       <div class="container marketplace__container">
 
-        <button class="btn marketplace-aside__btn" id="aside-btn">
-          Filter
-        </button>
-
-        <div class="marketplace__aside">
-          <aside class="filters">
-            <div class="filters__wrap">
-              <h3 class="filters__title">Filters</h3>
-              <div class="filters__inner">
-
-                <div class="accordion__item">
-                  <button class="accordion__btn" type="button">
-                    <h4>nft Type</h4>
-                    <span></span>
-                  </button>
-                  <div class="accordion__info">
-                    <label class="label label--checkbox" for="check1">
-                      nft type 1
-                      <input type="checkbox" name="check" id="check1">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="check2">
-                      nft type 2
-                      <input type="checkbox" name="check" id="check2">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="check3">
-                      nft type 3
-                      <input type="checkbox" name="check" id="check3">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="check4">
-                      nft type 4
-                      <input type="checkbox" name="check" id="check4">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="check5">
-                      nft type 5
-                      <input type="checkbox" name="check" id="check5">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="check6">
-                      nft type 6
-                      <input type="checkbox" name="check" id="check6">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="check7">
-                      nft type 7
-                      <input type="checkbox" name="check" id="check7">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="check8">
-                      nft type 8
-                      <input type="checkbox" name="check" id="check8">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="accordion__item">
-                  <button class="accordion__btn" type="button">
-                    <h4>rarity</h4>
-                    <span></span>
-                  </button>
-                  <div class="accordion__info">
-                    <label class="label label--checkbox" for="common">
-                      common
-                      <input type="checkbox" name="check" id="common">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="uncommon">
-                      uncommon
-                      <input type="checkbox" name="check" id="uncommon">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="rare">
-                      rare
-                      <input type="checkbox" name="check" id="rare">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="epic">
-                      epic
-                      <input type="checkbox" name="check" id="epic">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="legendary">
-                      legendary
-                      <input type="checkbox" name="check" id="legendary">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="accordion__item">
-                  <button class="accordion__btn" type="button">
-                    <h4>item</h4>
-                    <span></span>
-                  </button>
-                  <div class="accordion__info">
-                    <label class="label label--checkbox" for="wheel">
-                      wheel
-                      <input type="checkbox" name="check" id="wheel">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="nytro">
-                      nytro
-                      <input type="checkbox" name="check" id="nytro">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="turbine">
-                      turbine
-                      <input type="checkbox" name="check" id="turbine">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="engine">
-                      engine
-                      <input type="checkbox" name="check" id="engine">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="label label--checkbox" for="tank">
-                      tank
-                      <input type="checkbox" name="check" id="tank">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="accordion__item">
-                  <button class="accordion__btn" type="button">
-                    <h4>others</h4>
-                    <span></span>
-                  </button>
-                  <div class="accordion__info ml">
-                    <label class="label label--select" for="select-first">
-                      <span class="custom-dropdown">
-                        <div class="shadow">
-                          <select>
-                            <option>Name (A-Z)</option>
-                            <option>Name (Z-A)</option>
-                            <option>Name (A)</option>
-                            <option>Name (Z)</option>
-                          </select>
-                        </div>
-                      </span>
-                    </label>
-                    <label class="label label--range" for="range-level">
-                      Level
-                      <input class="range" type="range" value="50" min="1" max="100" id="range-level" />
-                    </label>
-                    <label class="label label--range" for="range-amount">
-                      Amount
-                      <input class="range" type="range" value="50" min="0" max="100" id="range-amount" />
-                    </label>
-                    <label class="label label--select" for="select-first">
-                      Added to website
-                      <span class="custom-dropdown mt">
-                        <div class="shadow">
-                          <select>
-                            <option>Name (A-Z)</option>
-                            <option>Name (Z-A)</option>
-                            <option>Name (A)</option>
-                            <option>Name (Z)</option>
-                          </select>
-                        </div>
-                      </span>
-                    </label>
-                  </div>
-
-                </div>
-              </div>
-          </aside>
-          <!-- /.aside -->
-
-          <div class="latest-operations">
-            <div class="latest-operations__wrap">
-              <h3 class="latest-operations__title">latest operations</h3>
-              <div class="latest-operations__inner">
-                <div class="latest-operations__item">
-                  <div class="latest-operations__item-heading">
-                    <div class="latest-operations__item-user">
-                      <div class="latest-operations__item-icon"></div>
-                      <div class="latest-operations__item-name">
-                        Name
-                        <h4 id="card-owner-name">Jack 223</h4>
-                      </div>
-                    </div>
-                    <time class="latest-operations__item-date" datetime="16:31">4:31 pm</time>
-                  </div>
-                  <article class="catalog-card operations">
-                    <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                        stroke="#00FBCE" stroke-width="1.84161" />
-                      <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                    </svg>
-                    <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                        stroke-width="1.84161" />
-                      <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                    </svg>
-                    <div class="catalog-card__inner">
-                      <img src="img/catalog-item1.png" alt="catalog item">
-                      <div class="catalog-card__license-wrap">
-                        <div class="catalog-card__license">
-                          License plate</div>
-                      </div>
-                      <div class="catalog-card__heading">
-                        <div class="catalog-card__type">
-                          Type
-                          <b>Common</b>
-                        </div>
-                        <div class="catalog-card__title-shadow">
-                          <div class="catalog-card__title">
-                            Name
-                            <h4 class="caption">Bike Name</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="catalog-card__info">
-                        <p>Level <b>17</b></p>
-                        <p>Power <b>17</b></p>
-                        <p>Exp <b>17</b></p>
-                        <p>Fuel <b>17</b></p>
-                        <p>Speed <b>17</b></p>
-                        <p>Repair <b>17</b></p>
-                      </div>
-                    </div>
-                  </article>
-                  <!-- /.catalog-card -->
-                </div>
-                <div class="latest-operations__item">
-                  <div class="latest-operations__item-heading">
-                    <div class="latest-operations__item-user">
-                      <div class="latest-operations__item-icon"></div>
-                      <div class="latest-operations__item-name">
-                        Name
-                        <h4 id="card-owner-name">Jack 223</h4>
-                      </div>
-                    </div>
-                    <time class="latest-operations__item-date" datetime="16:31">4:31 pm</time>
-                  </div>
-                  <article class="catalog-card operations">
-                    <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                        stroke="#00FBCE" stroke-width="1.84161" />
-                      <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                    </svg>
-                    <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                        stroke-width="1.84161" />
-                      <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                    </svg>
-                    <div class="catalog-card__inner">
-                      <img src="img/catalog-item3.png" alt="catalog item">
-                      <div class="catalog-card__license-wrap">
-                        <div class="catalog-card__license">
-                          License plate</div>
-                      </div>
-                      <div class="catalog-card__heading">
-                        <div class="catalog-card__type">
-                          Type
-                          <b>Common</b>
-                        </div>
-                        <div class="catalog-card__title-shadow">
-                          <div class="catalog-card__title">
-                            Name
-                            <h4 class="caption">Bike Name</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="catalog-card__info">
-                        <p>Level <b>17</b></p>
-                        <p>Power <b>17</b></p>
-                        <p>Exp <b>17</b></p>
-                        <p>Fuel <b>17</b></p>
-                        <p>Speed <b>17</b></p>
-                        <p>Repair <b>17</b></p>
-                      </div>
-                    </div>
-                  </article>
-                  <!-- /.catalog-card -->
-                </div>
-                <div class="latest-operations__item">
-                  <div class="latest-operations__item-heading">
-                    <div class="latest-operations__item-user">
-                      <div class="latest-operations__item-icon"></div>
-                      <div class="latest-operations__item-name">
-                        Name
-                        <h4 id="card-owner-name">Jack 223</h4>
-                      </div>
-                    </div>
-                    <time class="latest-operations__item-date" datetime="16:31">4:31 pm</time>
-                  </div>
-                  <article class="catalog-card operations">
-                    <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                        stroke="#00FBCE" stroke-width="1.84161" />
-                      <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                    </svg>
-                    <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                        stroke-width="1.84161" />
-                      <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                    </svg>
-                    <div class="catalog-card__inner">
-                      <img src="img/catalog-item1.png" alt="catalog item">
-                      <div class="catalog-card__license-wrap">
-                        <div class="catalog-card__license">
-                          License plate</div>
-                      </div>
-                      <div class="catalog-card__heading">
-                        <div class="catalog-card__type">
-                          Type
-                          <b>Common</b>
-                        </div>
-                        <div class="catalog-card__title-shadow">
-                          <div class="catalog-card__title">
-                            Name
-                            <h4 class="caption">Bike Name</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="catalog-card__info">
-                        <p>Level <b>17</b></p>
-                        <p>Power <b>17</b></p>
-                        <p>Exp <b>17</b></p>
-                        <p>Fuel <b>17</b></p>
-                        <p>Speed <b>17</b></p>
-                        <p>Repair <b>17</b></p>
-                      </div>
-                    </div>
-                  </article>
-                  <!-- /.catalog-card -->
-                </div>
-                <div class="latest-operations__item">
-                  <div class="latest-operations__item-heading">
-                    <div class="latest-operations__item-user">
-                      <div class="latest-operations__item-icon"></div>
-                      <div class="latest-operations__item-name">
-                        Name
-                        <h4 id="card-owner-name">Jack 223</h4>
-                      </div>
-                    </div>
-                    <time class="latest-operations__item-date" datetime="16:31">4:31 pm</time>
-                  </div>
-                  <article class="catalog-card operations">
-                    <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                        stroke="#00FBCE" stroke-width="1.84161" />
-                      <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                    </svg>
-                    <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                        stroke-width="1.84161" />
-                      <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                    </svg>
-                    <div class="catalog-card__inner">
-                      <img src="img/catalog-item2.png" alt="catalog item">
-                      <div class="catalog-card__license-wrap">
-                        <div class="catalog-card__license">
-                          License plate</div>
-                      </div>
-                      <div class="catalog-card__heading">
-                        <div class="catalog-card__type">
-                          Type
-                          <b>Common</b>
-                        </div>
-                        <div class="catalog-card__title-shadow">
-                          <div class="catalog-card__title">
-                            Name
-                            <h4 class="caption">Bike Name</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="catalog-card__info">
-                        <p>Level <b>17</b></p>
-                        <p>Power <b>17</b></p>
-                        <p>Exp <b>17</b></p>
-                        <p>Fuel <b>17</b></p>
-                        <p>Speed <b>17</b></p>
-                        <p>Repair <b>17</b></p>
-                      </div>
-                    </div>
-                  </article>
-                  <!-- /.catalog-card -->
-                </div>
-              </div>
-              <div class="latest-operations__btn-wrap">
-                <a class="btn latest-operations__btn" href="#">More</a>
-              </div>
-            </div>
-          </div>
-          <!-- /.latest-operations -->
-        </div>
-
         <div class="tab marketplace__tab">
 
           <ul class="tab__main marketplace__header">
@@ -501,9 +99,10 @@
               <div class="box"></div>
               <button class="btn tab__btn">Items</button>
             </li>
-            <p class="marketplace__desc content-text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-              amet.</p>
+            <li class="tab__item" data-tabindex="2">
+              <div class="box"></div>
+              <button class="btn tab__btn">Staking</button>
+            </li>
           </ul>
 
           <div class="tab__pages">
@@ -3587,7 +3186,7 @@
     </section>
     <!-- /.marketplace -->
 
-    <div class="modal buy-modal">
+    <div class="modal sell-modal">
       <div class="container modal__container">
         <div class="modal-layer"></div>
         <div class="modal-item">
@@ -3601,7 +3200,7 @@
             Back
           </button>
           <div class="modal-item__image">
-            <img src="img/catalog-item1.png" alt="catalog modal img">
+            <img src="img/catalog-item4.png" alt="catalog modal img">
           </div>
           <div class="modal-item__inner">
             <span class="modal-item__id" id="cardID">#455446</span>
@@ -3621,11 +3220,11 @@
               </div>
               <div class="modal-item__details">
                 <span>Slots</span>
-                <b>7</b>
+                <b>5</b>
               </div>
               <div class="modal-item__details">
                 <span>Type</span>
-                <b>Common</b>
+                <b>Uncommon</b>
               </div>
             </div>
             <div class="modal-item__achieve">
@@ -3639,15 +3238,12 @@
                 <img src="img/motorcycle-wheel.png" alt="wheel">
               </div>
               <div class="modal-item__thumb">
-                <img src="img/motorcycle-wheel.png" alt="wheel">
               </div>
               <div class="modal-item__thumb">
-                <img src="img/motorcycle-wheel.png" alt="wheel">
               </div>
             </div>
             <div class="modal-item__actions">
-              <button class="btn modal-item__btn" id="card-btn">Buy item</button>
-              <span class="modal-item__price" id="card-price">0.12 bnb</span>
+              <button class="btn modal-item__btn" id="card-btn">go to sell</button>
             </div>
           </div>
         </div>

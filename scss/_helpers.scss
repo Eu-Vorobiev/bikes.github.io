@@ -183,3 +183,33 @@
     justify-content: center;
   }
 }
+
+.move-icon {
+  position: absolute;
+  right: 15px;
+  z-index: 0;
+  top: 1px;
+  width: 36px;
+  height: 36px;
+  transform: translateX(0);
+  transition: $transition;
+  animation: move 1s ease-in-out infinite;
+
+  path {
+    stroke: #00FBCE;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

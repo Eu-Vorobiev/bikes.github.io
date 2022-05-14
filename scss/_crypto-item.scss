@@ -61,10 +61,15 @@
     justify-content: center;
     flex-direction: column;
     gap: 25px;
-    -webkit-backdrop-filter: blur(14.7329px);
-    backdrop-filter: blur(14.7329px);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     text-align: center;
     clip-path: polygon(0% 0%, 16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px));
+
+    @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+    }
 
     /* Note: backdrop-filter has minimal browser support */
 

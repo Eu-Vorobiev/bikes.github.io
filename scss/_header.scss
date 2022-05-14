@@ -57,16 +57,22 @@
     svg path {
       transition: $transition;
     }
+
     @media (any-hover: hover) {
+
       &:hover,
       &:focus {
         box-shadow: 0px 3px 38px #4605FF;
-  
+
         svg path {
           stroke: $green;
           fill: $green;
         }
       }
+    }
+
+    &.active {
+      box-shadow: 0px 3px 38px #4605FF;
     }
   }
 }

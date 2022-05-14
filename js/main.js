@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.toggle("active");
     header.classList.toggle("b-bottom");
     overlay.classList.toggle("active");
+    overlay.classList.remove("filter-page");
     if (menu.classList.contains("active")) {
       disableScroll();
     } else {
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (aside && aside.classList.contains("active")) {
       aside.classList.remove("active");
       overlay.classList.add("active");
-    }
+    };
   });
 
   const disableScroll = () => {
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     asideBtn.addEventListener("click", function () {
       aside.classList.toggle("active");
       overlay.classList.toggle("active");
+      overlay.classList.toggle("filter-page");
     });
   }
 
@@ -169,7 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Range Inputs
   const rangeInputs = document.querySelectorAll('input[type="range"]');
-  // const numberInput = document.querySelector('input[type="number"]');
 
   if (rangeInputs) {
     function handleInputChange(e) {
@@ -181,15 +182,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const max = target.max
       const val = target.value
 
-      target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 5px'
+      target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 5px';
     }
-    rangeInputs.forEach(input => {
-      input.addEventListener('input', handleInputChange)
-    })
 
-    // numberInput.addEventListener('input', handleInputChange)
+    rangeInputs.forEach(input => {
+      input.addEventListener('input', handleInputChange);
+      // let numberInput = input.nextElementSibling.classList(".range-value");
+      // numberInput.value == input.value;
+    });
   }
 });
+
 // Catalog Slider
 let swiperBikes = document.querySelector(".catalog-bikes__slider");
 

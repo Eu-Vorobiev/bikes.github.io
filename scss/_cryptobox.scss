@@ -32,6 +32,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 72px 130px;
+    position: relative;
 
     @media screen and (max-width: 1200px) {
       gap: 72px 20px;
@@ -45,15 +46,41 @@
       gap: 35px;
       padding: 90px 0 40px;
     }
+
+    .move-icon {
+      display: none;
+      width: 28px;
+      height: 28px;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
   }
 
   &-modal {
     .modal-item {
       padding: 60px 30px 30px;
+
+      @media screen and (max-width: 420px) {
+        padding: 60px 12px 20px;
+      }
+
+      @media screen and (max-width: 360px) {
+        padding: 50px 12px 30px;
+      }
+
+      @media screen and (max-width: 420px) and (max-height: 700px) {
+        padding: 50px 10px 30px;
+      }
     }
 
     .modal-item__caption {
       margin-bottom: 30px;
+
+      @media screen and (max-width: 420px) and (max-height: 760px) {
+        margin-bottom: 15px;
+      }
     }
 
     .modal-item__image {
@@ -71,6 +98,13 @@
 
         @media screen and (max-width: 475px) {
           min-width: 220px;
+        }
+
+        @media screen and (max-width: 420px) and (max-height: 740px) {
+          min-width: 220px;
+          max-height: unset;
+          flex-grow: 0;
+          margin: 0;
         }
       }
     }

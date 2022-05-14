@@ -41,6 +41,10 @@
       //     top: 120px;
       //   }
       // }
+      
+      &.z-index {
+        z-index: 6;
+      }
 
       @media (any-hover: hover) {
         &:hover {
@@ -53,7 +57,7 @@
         display: inline-flex;
         right: -55px;
 
-        &:hover{
+        &:hover {
           color: $black;
           background: linear-gradient(to top, $white);
           right: 15px;

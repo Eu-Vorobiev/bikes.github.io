@@ -44,11 +44,17 @@
     background: $violetGradient;
     box-shadow: 0px 3px 38px transparent;
     border-radius: 4px 0;
+
     @media (any-hover: hover) {
+
       &:hover,
       &:focus {
         box-shadow: 0px 3px 38px #4605FF;
       }
+    }
+
+    &.active {
+      box-shadow: 0px 3px 38px #4605FF;
     }
   }
 }

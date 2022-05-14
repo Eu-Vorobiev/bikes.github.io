@@ -1,0 +1,232 @@
+.staking {
+  margin-bottom: 90px;
+
+  @media screen and (max-width: 1150px) {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    margin: 0 auto;
+    max-width: 630px;
+    text-align: center;
+  }
+
+  &__wrap {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+
+    .move-icon {
+      position: absolute;
+      right: 15px;
+      top: 1px;
+      width: 36px;
+      height: 36px;
+      display: none;
+
+      @media screen and (max-width: 1150px) {
+        display: block;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 28px;
+        height: 28px;
+        top: 10px;
+      }
+    }
+
+    @media screen and (max-width: 1150px) {
+      overflow-x: scroll;
+      overflow-y: visible;
+      padding-bottom: 70px;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 360px;
+
+    @media screen and (max-width: 1150px) {
+      display: flex;
+      flex-shrink: 0;
+      min-width: 360px;
+    }
+
+    @media screen and (max-width: 480px) {
+      max-width: 330px;
+      min-width: 300px;
+    }
+
+    @media screen and (max-width: 400px) {
+      max-width: 280px;
+      min-width: unset;
+    }
+
+    svg path {
+      stroke: #00FBCE;
+    }
+
+    svg path:last-child {
+      fill: #00FBCE;
+    }
+
+    .border {
+      content: '';
+      position: absolute;
+      width: 49px;
+      height: 50px;
+      z-index: 2;
+    }
+
+    .border-up {
+      top: -3px;
+      right: -2px;
+    }
+
+    .border-down {
+      bottom: -2px;
+      left: -1px;
+    }
+
+    &-inner {
+      min-height: 530px;
+      padding: 45px 25px 25px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba($dark, .7);
+      border: 0.61387px solid #00FBCE;
+      text-align: center;
+      clip-path: polygon(0% 0%, 16px 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px));
+
+      @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+        background: linear-gradient(23.85deg, rgba(70, 5, 255, 0.37) 0%, rgba(111, 111, 111, 0) 36.22%, rgba(70, 5, 255, 0.32) 70.25%);
+        -webkit-backdrop-filter: blur(14.7329px);
+        backdrop-filter: blur(14.7329px);
+      }
+
+      @media screen and (max-width: 768px) {
+        min-height: 370px;
+        padding: 35px 25px 15px;
+      }
+
+      @media screen and (max-width: 480px) {
+        min-height: 370px;
+        padding: 35px 10px 15px;
+      }
+
+      h1 {
+        span {
+          font-size: clamp(rem(26), 5vw, rem(50));
+          line-height: divider(41px, 50px);
+        }
+      }
+    }
+
+    &-contract {
+      text-align: center;
+      font-family: $title-font;
+      font-weight: 400;
+      font-size: rem(21);
+      line-height: divider(25px, 21px);
+      text-align: center;
+      color: #9A49E0;
+      margin-bottom: 15px;
+
+      span {
+        margin-left: 2px;
+        color: $white;
+      }
+    }
+
+    &-invest {
+      position: relative;
+      font-family: $title-font;
+      font-size: rem(21);
+      line-height: divider(25px, 21px);
+      text-align: center;
+      color: $white;
+
+      span {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        border: none;
+        outline: none;
+        font-family: $content-font;
+        font-weight: 400;
+        font-size: rem(11);
+        line-height: divider(14px, 11px);
+        color: $white;
+      }
+    }
+
+    &-range {
+      margin-top: 25px;
+    }
+
+    &-btnWrap {
+      position: absolute;
+      bottom: -21px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      filter: drop-shadow(0px 4px 5px #00FF91);
+      display: flex;
+      flex-grow: 1;
+      transition: $transition;
+
+      &:hover {
+        filter: drop-shadow(0px 4px 20px #00FF91);
+      }
+    }
+
+    &-btn {
+      min-width: 154px;
+      border: 1px solid transparent;
+      box-shadow: none;
+      background: $accentGreen;
+      clip-path: polygon(0% 7px,
+          7px 0%,
+          100% 0%,
+          100% 7px,
+          100% calc(100% - 7px),
+          calc(100% - 7px) 100%,
+          7px 100%,
+          0 100%);
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
