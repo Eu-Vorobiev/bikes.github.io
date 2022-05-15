@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   let cryptoItemBtns = document.querySelectorAll(".crypto-item__btn");
-  let catalogCards = document.querySelectorAll(".catalog-card");
+  let catalogCards = document.querySelectorAll("#catalog-card");
+  let profileCards = document.querySelectorAll("#profile-card");
   let cryptoModal = document.querySelector(".cryptobox-modal");
-  let cardBuyModal = document.querySelector(".buy-modal");
-  let cardSellModal = document.querySelector(".sell-modal");
+  let cardBuyModal = document.querySelector("#buy-modal");
+  let cardSellModal = document.querySelector("#sell-modal");
   let modalClose = document.querySelector("#modal-close");
   let menu = document.querySelector(".nav");
   let menuBtn = document.querySelector(".menu-btn");
@@ -37,14 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
         position: fixed;
         width: 100%;
         height: 100vh;
-        top: ${-window.scrollY}px;
+        top: ${-(window.scrollY)}px;
         overflow: hidden;
-        padding-right: ${(scrollBarWidth)}px;
-      `;
-  };
-
+        padding-right: ${(scrollBarWidth) + 2}px;
+        `;
+        header.style.cssText = `
+        width: 99.989%;
+        `;
+      };
+      
   const enableScroll = () => {
     document.body.style.cssText = '';
+    header.style.cssText = '';
     window.scroll({
       top: document.body.dataset.scrollY
     });
@@ -110,21 +115,23 @@ document.addEventListener("DOMContentLoaded", function () {
     btnArray.forEach(btn => {
       btn.addEventListener("click", function () {
         modal.classList.add("visible");
-        document.body.classList.add("no-scroll");
+        disableScroll();
+        // document.body.classList.add("no-scroll");
       });
     });
-
   }
 
   showModal(cryptoItemBtns, cryptoModal);
   showModal(catalogCards, cardBuyModal);
+  showModal(profileCards, cardSellModal);
 
   function removeModal(modal) {
     if (modalClose) {
       modalClose.addEventListener("click", function () {
         if (modal) {
           modal.classList.remove("visible");
-          document.body.classList.remove("no-scroll");
+          enableScroll();
+          // document.body.classList.remove("no-scroll");
         }
       });
     }
@@ -132,13 +139,15 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       if (e.key === "Escape" && modal) {
         modal.classList.remove("visible");
-        document.body.classList.remove("no-scroll");
+        enableScroll();
+        // document.body.classList.remove("no-scroll");
       }
     })
   }
 
   removeModal(cryptoModal);
   removeModal(cardBuyModal);
+  removeModal(cardSellModal);
 
   // Tabs
   let tabBtn = document.querySelectorAll(".tab__item");
@@ -187,8 +196,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     rangeInputs.forEach(input => {
       input.addEventListener('input', handleInputChange);
-      // let numberInput = input.nextElementSibling.classList(".range-value");
-      // numberInput.value == input.value;
     });
   }
 });

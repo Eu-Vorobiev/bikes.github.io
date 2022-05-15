@@ -1,9 +1,9 @@
 @font-face {
     font-family: BIGMACCA;
     src: url(../../fonts/BigMacca/BIGMACCA.eot);
-    src: url(../../fonts/BigMacca/BIGMACCA.eot?#iefix) format('embedded-opentype'),
-        url(../../fonts/BigMacca/BIGMACCA.woff2) format('woff2'),
+    src: url(../../fonts/BigMacca/BIGMACCA.woff2) format('woff2'),
         url(../../fonts/BigMacca/BIGMACCA.woff) format('woff'),
+        url(../../fonts/BigMacca/BIGMACCA.eot?#iefix) format('embedded-opentype'),
         url(../../fonts/BigMacca/BIGMACCA.ttf) format('truetype');
     font-weight: 400;
     font-style: normal;

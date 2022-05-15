@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile</title>
-
+  <link rel="preload" href="fonts//BigMacca/BIGMACCA.woff2" as="font">
   <link rel="stylesheet" href="fonts/BigMacca/stylesheet.css" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,22 +85,50 @@
 
   <main class="main">
 
-    <section class="marketplace">
-      <div class="container marketplace__container">
+    <section class="profile">
+      <div class="container profile__container">
 
-        <div class="tab marketplace__tab">
+        <div class="profile__info">
+          <div class="profile__user">
+            <div class="profile__user-avatar">
+              <div class="profile__user-photo">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 11C12.7614 11 15 8.76142 15 6C15 3.23858 12.7614 1 10 1C7.23858 1 5 3.23858 5 6C5 8.76142 7.23858 11 10 11Z"
+                    stroke="white" stroke-width="2" />
+                  <path
+                    d="M15.0001 13H15.3521C16.0831 13.0002 16.789 13.2674 17.337 13.7513C17.885 14.2352 18.2374 14.9026 18.3281 15.628L18.7191 18.752C18.7542 19.0334 18.7291 19.3191 18.6455 19.5901C18.5618 19.8611 18.4214 20.1112 18.2337 20.3238C18.046 20.5364 17.8152 20.7066 17.5566 20.8232C17.2981 20.9398 17.0177 21.0001 16.7341 21H3.26606C2.98244 21.0001 2.70206 20.9398 2.44351 20.8232C2.18496 20.7066 1.95416 20.5364 1.76644 20.3238C1.57871 20.1112 1.43835 19.8611 1.35467 19.5901C1.27098 19.3191 1.24589 19.0334 1.28106 18.752L1.67106 15.628C1.76176 14.9022 2.11448 14.2346 2.66289 13.7506C3.21131 13.2667 3.91764 12.9997 4.64906 13H5.00006"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="profile__user-name">jack 223</h3>
+          </div>
+          <div class="profile__level">
+            <div class="profile__level-inner shadow-2px">
+              <div class="wallet__lvl profile__level-box">
+                <p class="content-text">lvl</p>
+                <b>7</b>
+              </div>
+              <div class="profile__level-progress">
+                To the next Level
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.profile__info -->
 
-          <ul class="tab__main marketplace__header">
-            <li class="tab__item active" data-tabindex="1">
-              <div class="box"></div>
+        <div class="tab profile__tab">
+
+          <ul class="tab__main profile__header">
+            <li class="tab__item tab__item--sm active" data-tabindex="1">
               <button class="btn tab__btn">Bikes</button>
             </li>
-            <li class="tab__item" data-tabindex="2">
-              <div class="box"></div>
+            <li class="tab__item tab__item--sm" data-tabindex="2">
               <button class="btn tab__btn">Items</button>
             </li>
-            <li class="tab__item" data-tabindex="2">
-              <div class="box"></div>
+            <li class="tab__item tab__item--sm" data-tabindex="3">
               <button class="btn tab__btn">Staking</button>
             </li>
           </ul>
@@ -109,13 +137,13 @@
 
             <div class="tab__content">
 
-              <div class="swiper catalog-bikes__slider">
+              <div class="swiper catalog-bikes__slider catalog-bikes__slider--profile">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  <div class="swiper-slide catalog-bikes__slide">
-                    <div class="catalog-bikes__inner">
-                      <article class="catalog-card">
+                  <div class="swiper-slide catalog-bikes__slide catalog-bikes__slide--sm">
+                    <div class="catalog-bikes__inner catalog-bikes__inner--sm">
+                      <article class="catalog-card catalog-card--small " id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -129,7 +157,7 @@
                           <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
                         </svg>
                         <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
+                          <img src="img/catalog-item5.png" alt="catalog item">
                           <div class="catalog-card__license-wrap">
                             <div class="catalog-card__license">
                               License plate</div>
@@ -157,7 +185,7 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small " id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -171,7 +199,7 @@
                           <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
                         </svg>
                         <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
+                          <img src="img/catalog-item4.png" alt="catalog item">
                           <div class="catalog-card__license-wrap">
                             <div class="catalog-card__license">
                               License plate</div>
@@ -199,7 +227,91 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small " id="profile-card">
+                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
+                            stroke="#00FBCE" stroke-width="1.84161" />
+                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
+                        </svg>
+                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
+                            stroke-width="1.84161" />
+                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
+                        </svg>
+                        <div class="catalog-card__inner">
+                          <img src="img/catalog-item5.png" alt="catalog item">
+                          <div class="catalog-card__license-wrap">
+                            <div class="catalog-card__license">
+                              License plate</div>
+                          </div>
+                          <div class="catalog-card__heading">
+                            <div class="catalog-card__type">
+                              Type
+                              <b>Common</b>
+                            </div>
+                            <div class="catalog-card__title-shadow">
+                              <div class="catalog-card__title">
+                                Name
+                                <h4 class="caption">Bike Name</h4>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <p>Level <b>17</b></p>
+                            <p>Power <b>17</b></p>
+                            <p>Exp <b>17</b></p>
+                            <p>Fuel <b>17</b></p>
+                            <p>Speed <b>17</b></p>
+                            <p>Repair <b>17</b></p>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- /.catalog-card -->
+                      <article class="catalog-card catalog-card--small " id="profile-card">
+                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
+                            stroke="#00FBCE" stroke-width="1.84161" />
+                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
+                        </svg>
+                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
+                            stroke-width="1.84161" />
+                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
+                        </svg>
+                        <div class="catalog-card__inner">
+                          <img src="img/catalog-item5.png" alt="catalog item">
+                          <div class="catalog-card__license-wrap">
+                            <div class="catalog-card__license">
+                              License plate</div>
+                          </div>
+                          <div class="catalog-card__heading">
+                            <div class="catalog-card__type">
+                              Type
+                              <b>Common</b>
+                            </div>
+                            <div class="catalog-card__title-shadow">
+                              <div class="catalog-card__title">
+                                Name
+                                <h4 class="caption">Bike Name</h4>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <p>Level <b>17</b></p>
+                            <p>Power <b>17</b></p>
+                            <p>Exp <b>17</b></p>
+                            <p>Fuel <b>17</b></p>
+                            <p>Speed <b>17</b></p>
+                            <p>Repair <b>17</b></p>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- /.catalog-card -->
+                      <article class="catalog-card catalog-card--small " id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -241,7 +353,7 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small " id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -256,594 +368,6 @@
                         </svg>
                         <div class="catalog-card__inner">
                           <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
                           <div class="catalog-card__license-wrap">
                             <div class="catalog-card__license">
                               License plate</div>
@@ -873,9 +397,9 @@
                       <!-- /.catalog-card -->
                     </div>
                   </div>
-                  <div class="swiper-slide catalog-bikes__slide">
-                    <div class="catalog-bikes__inner">
-                      <article class="catalog-card">
+                  <div class="swiper-slide catalog-bikes__slide catalog-bikes__slide--sm">
+                    <div class="catalog-bikes__inner catalog-bikes__inner--sm">
+                      <article class="catalog-card catalog-card--small" id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -917,49 +441,7 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small " id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -1001,7 +483,133 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small " id="profile-card">
+                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
+                            stroke="#00FBCE" stroke-width="1.84161" />
+                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
+                        </svg>
+                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
+                            stroke-width="1.84161" />
+                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
+                        </svg>
+                        <div class="catalog-card__inner">
+                          <img src="img/catalog-item5.png" alt="catalog item">
+                          <div class="catalog-card__license-wrap">
+                            <div class="catalog-card__license">
+                              License plate</div>
+                          </div>
+                          <div class="catalog-card__heading">
+                            <div class="catalog-card__type">
+                              Type
+                              <b>Common</b>
+                            </div>
+                            <div class="catalog-card__title-shadow">
+                              <div class="catalog-card__title">
+                                Name
+                                <h4 class="caption">Bike Name</h4>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <p>Level <b>17</b></p>
+                            <p>Power <b>17</b></p>
+                            <p>Exp <b>17</b></p>
+                            <p>Fuel <b>17</b></p>
+                            <p>Speed <b>17</b></p>
+                            <p>Repair <b>17</b></p>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- /.catalog-card -->
+                      <article class="catalog-card catalog-card--small " id="profile-card">
+                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
+                            stroke="#00FBCE" stroke-width="1.84161" />
+                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
+                        </svg>
+                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
+                            stroke-width="1.84161" />
+                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
+                        </svg>
+                        <div class="catalog-card__inner">
+                          <img src="img/catalog-item5.png" alt="catalog item">
+                          <div class="catalog-card__license-wrap">
+                            <div class="catalog-card__license">
+                              License plate</div>
+                          </div>
+                          <div class="catalog-card__heading">
+                            <div class="catalog-card__type">
+                              Type
+                              <b>Common</b>
+                            </div>
+                            <div class="catalog-card__title-shadow">
+                              <div class="catalog-card__title">
+                                Name
+                                <h4 class="caption">Bike Name</h4>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <p>Level <b>17</b></p>
+                            <p>Power <b>17</b></p>
+                            <p>Exp <b>17</b></p>
+                            <p>Fuel <b>17</b></p>
+                            <p>Speed <b>17</b></p>
+                            <p>Repair <b>17</b></p>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- /.catalog-card -->
+                      <article class="catalog-card catalog-card--small " id="profile-card">
+                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
+                            stroke="#00FBCE" stroke-width="1.84161" />
+                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
+                        </svg>
+                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
+                            stroke-width="1.84161" />
+                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
+                        </svg>
+                        <div class="catalog-card__inner">
+                          <img src="img/catalog-item3.png" alt="catalog item">
+                          <div class="catalog-card__license-wrap">
+                            <div class="catalog-card__license">
+                              License plate</div>
+                          </div>
+                          <div class="catalog-card__heading">
+                            <div class="catalog-card__type">
+                              Type
+                              <b>Common</b>
+                            </div>
+                            <div class="catalog-card__title-shadow">
+                              <div class="catalog-card__title">
+                                Name
+                                <h4 class="caption">Bike Name</h4>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <p>Level <b>17</b></p>
+                            <p>Power <b>17</b></p>
+                            <p>Exp <b>17</b></p>
+                            <p>Fuel <b>17</b></p>
+                            <p>Speed <b>17</b></p>
+                            <p>Repair <b>17</b></p>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- /.catalog-card -->
+                      <article class="catalog-card catalog-card--small " id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -1016,594 +624,6 @@
                         </svg>
                         <div class="catalog-card__inner">
                           <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item3.png" alt="catalog item">
                           <div class="catalog-card__license-wrap">
                             <div class="catalog-card__license">
                               License plate</div>
@@ -1644,13 +664,13 @@
 
             <div class="tab__content">
 
-              <div class="swiper catalog-items__slider">
+              <div class="swiper catalog-items__slider catalog-items__slider--profile">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  <div class="swiper-slide catalog-items__slide">
-                    <div class="catalog-items__inner">
-                      <article class="catalog-card">
+                  <div class="swiper-slide catalog-items__slide catalog-items__slide--sm">
+                    <div class="catalog-items__inner catalog-items__inner--sm">
+                      <article class="catalog-card catalog-card--small" id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -1692,91 +712,7 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small" id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -1818,7 +754,7 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small" id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -1833,552 +769,6 @@
                         </svg>
                         <div class="catalog-card__inner">
                           <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
                           <div class="catalog-card__license-wrap">
                             <div class="catalog-card__license">
                               License plate</div>
@@ -2408,9 +798,9 @@
                       <!-- /.catalog-card -->
                     </div>
                   </div>
-                  <div class="swiper-slide catalog-items__slide">
-                    <div class="catalog-items__inner">
-                      <article class="catalog-card">
+                  <div class="swiper-slide catalog-items__slide catalog-items__slide--sm">
+                    <div class="catalog-items__inner catalog-items__inner--sm">
+                      <article class="catalog-card catalog-card--small" id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -2452,7 +842,7 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small" id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -2494,637 +884,7 @@
                         </div>
                       </article>
                       <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item1.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item4.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
-                        <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
-                            stroke="#00FBCE" stroke-width="1.84161" />
-                          <path d="M1.00022 50.7778L12.1851 50.7778L1.00022 40.342L1.00022 50.7778Z" fill="#00FBCE" />
-                        </svg>
-                        <svg class="border border-up" width="52" height="49" viewBox="0 0 52 49" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.668457 1.85205H32.8249L50.3012 17.1988V29.1693V48.5062" stroke="#00FBCE"
-                            stroke-width="1.84161" />
-                          <path d="M51.0003 1.23828H39.8154L51.0003 11.6741V1.23828Z" fill="#00FBCE" />
-                        </svg>
-                        <div class="catalog-card__inner">
-                          <img src="img/catalog-item2.png" alt="catalog item">
-                          <div class="catalog-card__license-wrap">
-                            <div class="catalog-card__license">
-                              License plate</div>
-                          </div>
-                          <div class="catalog-card__heading">
-                            <div class="catalog-card__type">
-                              Type
-                              <b>Common</b>
-                            </div>
-                            <div class="catalog-card__title-shadow">
-                              <div class="catalog-card__title">
-                                Name
-                                <h4 class="caption">Bike Name</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="catalog-card__info">
-                            <p>Level <b>17</b></p>
-                            <p>Power <b>17</b></p>
-                            <p>Exp <b>17</b></p>
-                            <p>Fuel <b>17</b></p>
-                            <p>Speed <b>17</b></p>
-                            <p>Repair <b>17</b></p>
-                          </div>
-                        </div>
-                      </article>
-                      <!-- /.catalog-card -->
-                      <article class="catalog-card">
+                      <article class="catalog-card catalog-card--small" id="profile-card">
                         <svg class="border border-down" width="51" height="51" viewBox="0 0 51 51" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path d="M50.6328 48.936L18.4764 48.936L1.0001 33.5893L1.0001 21.6188L1.0001 0.440323"
@@ -3177,16 +937,105 @@
               </div>
 
             </div>
+
+            <div class="tab__content">
+
+              <div class="profile__staking">
+                <h3 class="profile__staking-invest">Your invests: <span>$500</span></h3>
+
+                <div class="profile__staking-target target">
+                  <div class="target__text">Time to target</div>
+                  <div class="target__progress">
+                    <b>1500$</b>
+                    <input class="range target__input-range" type="range" value="750" min="10" max="1500" id="invest"
+                      step="1" oninput="rangevalue.value=value" />
+                    <span class="target__input-number">
+                      <input class="range-value target__input-value" type="text" id="rangevalue" value="750"
+                        oninput="range.value=value">
+                      $
+                    </span>
+                    <div class="target__time">
+                      <span>17</span> days left
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
           <!-- /.tab__pages -->
         </div>
         <!-- /.tab -->
-      </div>
-      <!-- /.container marketplace__container -->
-    </section>
-    <!-- /.marketplace -->
 
-    <div class="modal sell-modal">
+        <div class="profile__balance">
+
+          <div class="wallet profile__wallet">
+            <div class="profile__wallet-inner shadow-2px">
+              <div class="wallet__info">
+                <p class="content-text">Balance</p>
+                <b><span>000.233</span>coin</b>
+              </div>
+              <div class="profile__wallet-actions">
+                <div class="profile__wallet-btnWrap active">
+                  <a class="btn profile__wallet-btn" href="#">top up</a>
+                </div>
+                <div class="profile__wallet-btnWrap">
+                  <a class="btn profile__wallet-btn" href="#">deposit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="transactions profile__transactions">
+            <div class="transactions__inner shadow-2px">
+              <h5 class="transactions__title">transactions story</h5>
+              <div class="transactions__wrap">
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 May, 3:44 pm</time>
+                <div class="transactions__buying">Cryptobox 5</div>
+                <b class="transactions__price">0.01 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 November, 13:44 pm</time>
+                <div class="transactions__buying">Cryptobox 225</div>
+                <b class="transactions__price">12212.20 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 May, 3:44 pm</time>
+                <div class="transactions__buying">Cryptobox 5</div>
+                <b class="transactions__price">0.01 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 November, 13:44 pm</time>
+                <div class="transactions__buying">Cryptobox 225</div>
+                <b class="transactions__price">12212.20 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 May, 3:44 pm</time>
+                <div class="transactions__buying">Cryptobox 5</div>
+                <b class="transactions__price">0.01 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 November, 13:44 pm</time>
+                <div class="transactions__buying">Cryptobox 225</div>
+                <b class="transactions__price">12212.20 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 May, 3:44 pm</time>
+                <div class="transactions__buying">Cryptobox 5</div>
+                <b class="transactions__price">0.01 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 November, 13:44 pm</time>
+                <div class="transactions__buying">Cryptobox 225</div>
+                <b class="transactions__price">12212.20 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 May, 3:44 pm</time>
+                <div class="transactions__buying">Cryptobox 5</div>
+                <b class="transactions__price">0.01 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 November, 13:44 pm</time>
+                <div class="transactions__buying">Cryptobox 225</div>
+                <b class="transactions__price">12212.20 bnb</b>
+                <time class="transactions__time" datetime="05.14.2022 15:44">14 November, 13:44 pm</time>
+                <div class="transactions__buying">Cryptobox 225</div>
+                <b class="transactions__price">12212.20 bnb</b>
+              </div>
+            </div>
+          </div>
+          <!-- /.transactions profile__transactions -->
+
+        </div>
+        <!-- /.profile__balance -->
+      </div>
+      <!-- /.container profile__container -->
+    </section>
+    <!-- /.profile -->
+
+    <div class="modal" id="sell-modal">
       <div class="container modal__container">
         <div class="modal-layer"></div>
         <div class="modal-item">
@@ -3200,7 +1049,7 @@
             Back
           </button>
           <div class="modal-item__image">
-            <img src="img/catalog-item4.png" alt="catalog modal img">
+            <img src="img/catalog-item2.png" alt="catalog modal img">
           </div>
           <div class="modal-item__inner">
             <span class="modal-item__id" id="cardID">#455446</span>
@@ -3252,23 +1101,6 @@
 
   </main>
   <!-- /.main -->
-
-  <footer class="footer">
-    <div class="container footer__container">
-      <a class="logo footer__logo" href="index.html">
-        <img src="img/icons/logo.svg" alt="cryptobikes">
-      </a>
-      <ul class="footer__menu">
-        <li class="footer__item"><a class="footer__link caption" href="marketplace.html">Marketplace</a></li>
-        <li class="footer__item"><a class="footer__link caption" href="profile.html">my account</a></li>
-        <li class="footer__item"><a class="footer__link caption" href="about-us.html">about us</a></li>
-        <li class="footer__item"><a class="footer__link caption" href="index.html">cryptobox</a></li>
-        <li class="footer__item"><a class="footer__link caption" href="collection.html">nft collections</a></li>
-      </ul>
-    </div>
-    <!-- /.container footer__container -->
-  </footer>
-  <!-- /.footer -->
 
   <div class="overlay"></div>
 

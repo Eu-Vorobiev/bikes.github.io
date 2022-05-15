@@ -7,7 +7,7 @@
       margin: 0 -35px;
 
       .catalog-bikes-pagination {
-        max-width: 220px;
+        max-width: 200px;
         bottom: 60px;
         left: 50%;
         transform: translateX(-50%);
@@ -33,7 +33,7 @@
 
       .btns-wrap {
         position: absolute;
-        bottom: 60px;
+        bottom: 48px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
@@ -43,6 +43,12 @@
         align-items: center;
         justify-content: space-between;
       }
+
+      &--profile {
+        padding-top: 20px;
+        padding-bottom: 110px;
+        margin: 0 -22px;
+      }
     }
 
     &__slider-nextBtn,
@@ -50,11 +56,15 @@
       cursor: pointer;
       background-image: url("../img/icons/arrow-left.svg");
       background-repeat: no-repeat;
+      background-position: center;
       background-size: auto;
-      width: 16px;
-      height: 16px;
+      width: 40px;
+      height: 40px;
       opacity: .7;
       transition: $transition;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
         opacity: 1;
@@ -76,6 +86,20 @@
 
       @media screen and (max-width: 800px) {
         justify-content: space-evenly;
+      }
+
+      &--sm {
+        margin: 0 22px;
+        gap: 10px 8px;
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+
+        @media screen and (max-width: 768px) {
+          gap: 20px 8px;
+        }
+
+        @media screen and (max-width: 475px) {
+          justify-content: center;
+        }
       }
     }
   }
@@ -87,7 +111,7 @@
       margin: 0 -35px;
 
       .catalog-items-pagination {
-        max-width: 220px;
+        max-width: 200px;
         bottom: 60px;
         left: 50%;
         transform: translateX(-50%);
@@ -113,7 +137,7 @@
 
       .btns-wrap {
         position: absolute;
-        bottom: 60px;
+        bottom: 48px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
@@ -123,6 +147,12 @@
         align-items: center;
         justify-content: space-between;
       }
+
+      &--profile {
+        padding-top: 20px;
+        padding-bottom: 110px;
+        margin: 0 -22px;
+      }
     }
 
     &__slider-nextBtn,
@@ -130,11 +160,15 @@
       cursor: pointer;
       background-image: url("../img/icons/arrow-left.svg");
       background-repeat: no-repeat;
+      background-position: center;
       background-size: auto;
-      width: 16px;
-      height: 16px;
+      width: 40px;
+      height: 40px;
       opacity: .7;
       transition: $transition;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
         opacity: 1;
@@ -156,6 +190,20 @@
 
       @media screen and (max-width: 800px) {
         justify-content: space-evenly;
+      }
+
+      &--sm {
+        margin: 0 22px;
+        gap: 10px 8px;
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+
+        @media screen and (max-width: 768px) {
+          gap: 20px 8px;
+        }
+
+        @media screen and (max-width: 475px) {
+          justify-content: center;
+        }
       }
     }
   }

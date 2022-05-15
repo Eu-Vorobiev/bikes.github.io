@@ -1,0 +1,80 @@
+.transactions {
+  filter: drop-shadow(0px 0px 15px rgba(#4605FF, 1));
+
+  &__inner {
+    padding: 32px 8px 32px 28px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 400px) {
+      padding: 22px 8px 22px 16px;
+    }
+
+    h5 {
+      font-family: $title-font;
+      font-size: rem(14);
+      line-height: divider(12px, 14px);
+      color: $white;
+    }
+  }
+
+  &__wrap {
+    padding-right: 8px;
+    padding-top: 20px;
+    min-height: 230px;
+    max-height: 230px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: minmax(88px, auto) minmax(100px, 1fr) minmax(52px, auto);
+    gap: 10px 6px;
+    align-content: baseline;
+    justify-items: stretch;
+    font-family: $content-font;
+    font-size: rem(11);
+    line-height: divider(14px, 11px);
+    color: $white;
+    scrollbar-width: thin;
+    scrollbar-color: #9D49E0 $white;
+
+    @media screen and (max-width: 950px) {
+      grid-template-columns: minmax(70px, auto) minmax(85px, 1fr) minmax(45px, auto);
+    }
+
+    @media screen and (max-width: 575px) {
+      height: 180px;
+      min-height: 180px;
+    }
+
+    time {
+      font-family: inherit;
+    }
+
+    b {
+      font-weight: 700;
+      text-align: right;
+    }
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $darkViolet;
+      box-shadow: inset 0px 2px 5px 0 rgba(#4605FF, .6);
+    }
+  }
+
+
+  &__buying {
+    align-self: center;
+    font-weight: 700;
+    color: #B475FF;
+    padding-bottom: 3px;
+    transform: translateY(-3px);
+    border-bottom: 1px solid #C4C4C4;
+  }
+}

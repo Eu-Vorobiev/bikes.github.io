@@ -17,6 +17,11 @@ input[type="range"].staking__item-range {
   margin-right: 0;
 }
 
+input[type="range"].target__input-range {
+  max-width: 100%;
+  margin-right: 0;
+}
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 12px;
