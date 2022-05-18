@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let filterBtn = document.querySelectorAll(".accordion__btn");
   let filterItem = document.querySelectorAll(".accordion__item");
   let asideBtn = document.querySelector("#aside-btn");
+  let profileAsideBtn = document.querySelector("#profile-aside-btn");
   let aside = document.querySelector(".marketplace__aside");
   let asideProfile = document.querySelector(".filters--profile");
 
@@ -58,10 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (asideProfile) {
-    asideBtn.addEventListener("click", function () {
+    profileAsideBtn.addEventListener("click", function () {
       asideProfile.classList.toggle("active");
-      overlay.classList.toggle("active");
-      overlay.classList.toggle("filter-page");
     })
   }
 

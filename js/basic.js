@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     if (asideProfile && asideProfile.classList.contains("active")) {
       asideProfile.classList.remove("active");
-      overlay.classList.add("active");
     }
   });
 
