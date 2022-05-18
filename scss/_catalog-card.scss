@@ -49,6 +49,10 @@
         max-height: 145px;
         margin-bottom: 8px;
 
+        @media not all and (min-resolution:.001dpcm) {
+          height: 145px;
+        }
+
         @media screen and (max-width: 475px) {
           height: 120px;
         }
@@ -418,6 +422,10 @@
       max-height: 145px;
       margin-bottom: 12px;
       border-radius: 13px;
+      
+      @media not all and (min-resolution:.001dpcm) {
+        height: 145px;
+      }
 
       @media screen and (max-width: 475px) {
         height: 120px;

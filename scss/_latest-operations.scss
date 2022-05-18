@@ -1,7 +1,6 @@
 .latest-operations {
   min-height: 300px;
   padding: 30px 22px 55px;
-  // border-radius: 0px 6px 0 0;
   display: flex;
   position: relative;
 
@@ -114,7 +113,7 @@
 
     &-name {
       font-weight: 400;
-      font-size: rem(4);
+      font-size: rem(7);
       line-height: 1.1;
       color: $white;
 
@@ -124,12 +123,13 @@
         font-size: rem(8.3);
         line-height: divider(7px, 8px);
         color: $white;
+        margin-top: 2px;
       }
     }
 
     &-date {
-      font-size: 4.00924px;
-      line-height: 5px;
+      font-size: 8px;
+      line-height: 1.1;
       color: $white;
     }
   }
