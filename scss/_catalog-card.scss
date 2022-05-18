@@ -48,6 +48,14 @@
       img {
         max-height: 145px;
         margin-bottom: 8px;
+
+        @media screen and (max-width: 475px) {
+          height: 120px;
+        }
+
+        @media screen and (max-width: 400px) {
+          height: 85px;
+        }
       }
     }
 
@@ -410,6 +418,14 @@
       max-height: 145px;
       margin-bottom: 12px;
       border-radius: 13px;
+
+      @media screen and (max-width: 475px) {
+        height: 120px;
+      }
+
+      @media screen and (max-width: 400px) {
+        height: 85px;
+      }
     }
 
     @media screen and (max-width: 800px) {

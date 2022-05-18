@@ -7,6 +7,9 @@
     padding-bottom: 0;
     overflow: hidden;
   }
+  @media screen and (max-width: 475px) {
+    position: static;
+  }
 
   @supports ((-webkit-backdrop-filter: blur(70px)) or (backdrop-filter: blur(70px))) {
     background: linear-gradient(-70.6deg, rgba(13, 13, 13, 0.37) 4%, rgba(0, 0, 0, 0) 52.96%, rgba(0, 0, 0, 0.32) 98.94%);
