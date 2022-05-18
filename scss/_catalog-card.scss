@@ -189,16 +189,23 @@
       }
 
       img {
-        height: 145px;
+        max-height: 160px;
+        height: 160px;
 
         @media screen and (max-width: 800px) {
-          height: 105px;
+          height: 130px;
         }
 
         @media screen and (max-width: 590px) {
-          height: 85px;
+          height: 120px;
           margin: 0 auto 12px;
         }
+
+
+        @media screen and (max-width: 400px) {
+          height: 100px;
+        }
+
       }
     }
 
@@ -259,6 +266,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 92px;
+
+        @media not all and (min-resolution:.001dpcm) {
+          height: 92px;
+        }
+
+        @media screen and (max-width: 475px) {
+          height: 120px;
+        }
+
+        @media screen and (max-width: 400px) {
+          height: 100px;
+        }
       }
     }
 
@@ -422,7 +442,7 @@
       max-height: 145px;
       margin-bottom: 12px;
       border-radius: 13px;
-      
+
       @media not all and (min-resolution:.001dpcm) {
         height: 145px;
       }
