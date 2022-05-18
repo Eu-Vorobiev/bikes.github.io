@@ -5,7 +5,7 @@
   position: relative;
   transition: $transition;
   margin-bottom: 20px;
-  
+
   @media screen and (max-width: 1150px) {
     justify-content: start;
     padding: 30px 30px 35px 25px;
@@ -19,34 +19,41 @@
     transition: $transition;
 
     @media screen and (max-width: 475px) {
-      opacity: 0;
       display: none;
+      opacity: 0;
       visibility: hidden;
-      position: absolute;
-      top: 50px;
-      right: -100%;
-      z-index: 7;
-      padding: 25px 55px 10px;
+      flex-direction: row;
+      align-items: center;
+      padding: 25px 0px 10px;
       margin-right: 0;
+      min-height: unset;
     }
 
     &.active {
       opacity: 1;
       display: flex;
       visibility: visible;
-      right: 0;
-     
+
       &::before {
-        display: block;
+        display: none;
       }
     }
 
     &::before {
       display: none;
     }
+
     .filters__wrap {
       @media screen and (max-width: 475px) {
-        max-width: 320px;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+
+    .filters__inner {
+      @media screen and (max-width: 475px) {
+        flex-direction: row;
+        justify-content: center;
       }
     }
 
@@ -54,6 +61,10 @@
       &__item {
         padding-left: 0;
         margin-bottom: 15px;
+
+        @media screen and (max-width: 475px) {
+          margin-bottom: 0;
+        }
       }
 
       &__btn {
@@ -88,6 +99,18 @@
         }
       }
 
+    }
+
+    .accordion__item+.accordion__item {
+      @media screen and (max-width: 475px) {
+        margin-left: 25px;
+      }
+    }
+
+    .accordion__item:first-child {
+      @media screen and (max-width: 475px) {
+        margin-left: 60px;
+      }
     }
   }
 
