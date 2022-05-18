@@ -7,35 +7,63 @@
     padding-bottom: 50px;
   }
 
+  &--profile {
+    padding-top: 50px;
+    background: rgba(#2F1975, 7);
+
+    @supports ((-webkit-backdrop-filter: blur(70px)) or (backdrop-filter: blur(70px))) {
+      background: linear-gradient(-70.6deg, rgba(13, 13, 13, 0.37) 4%, rgba(0, 0, 0, 0) 52.96%, rgba(0, 0, 0, 0.32) 98.94%);
+      -webkit-backdrop-filter: blur(70px);
+      backdrop-filter: blur(70px);
+    }
+  }
+
   &__container {
     display: flex;
     align-items: center;
-    gap: 20px 240px;
-
-    @media screen and (max-width: 1100px) {
-      gap: 20px 150px;
-    }
-
-    @media screen and (max-width: 900px) {
-      gap: 20px 20px;
-      justify-content: space-between;
-    }
 
     @media screen and (max-width: 720px) {
       flex-direction: column;
       align-items: start;
-      gap: 35px;
+    }
+
+    @media screen and (max-width: 575px) {
+      align-items: center;
     }
   }
 
   &__logo {
+    margin-right: 240px;
+
+    @media screen and (max-width: 1100px) {
+      margin-right: 150px;
+    }
+
     @media screen and (max-width: 992px) {
       flex-shrink: 0;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin-right: 40px;
+    }
+
+    @media screen and (max-width: 720px) {
+      margin-bottom: 35px;
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin-bottom: 55px;
+      transform: translateX(3px);
     }
 
     img {
       max-height: 53px;
       max-width: 164px;
+
+      @media screen and (max-width: 575px) {
+        max-height: unset;
+      }
     }
   }
 
@@ -54,11 +82,10 @@
     }
 
     @media screen and (max-width: 575px) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media screen and (max-width: 400px) {
       grid-template-columns: 1fr;
+      gap: 25px;
+      align-items: center;
+      text-align: center;
     }
 
     a {
@@ -77,6 +104,7 @@
       }
 
       @media (any-hover: hover) {
+
         &:hover,
         &:focus {
           &::after {

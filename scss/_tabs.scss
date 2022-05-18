@@ -2,12 +2,13 @@
   &__main {
     display: flex;
     align-items: start;
-    gap: 28px;
 
     @media screen and (max-width: 480px) {
       margin-top: 15px;
-      gap: 15px 150px;
-      justify-content: center;
+    }
+
+    @media screen and (max-width: 370px) {
+      flex-direction: column;
     }
   }
 
@@ -15,7 +16,42 @@
     filter: drop-shadow(0px 0px 10px rgba(#4605FF, 1));
     transition: $transition;
 
+    &+& {
+      margin-left: 28px;
+
+      @media screen and (max-width: 370px) {
+        margin-left: auto;
+      }
+    }
+
+    @media screen and (max-width: 370px) {
+      margin: 0 auto 15px;
+    }
+
     &--sm {
+      margin-right: 8px;
+
+      @media screen and (max-width: 370px) {
+        margin: 0 auto 15px;
+      }
+
+      &+& {
+        margin-left: 0;
+
+        @media screen and (max-width: 370px) {
+          margin: 0 auto 15px;
+        }
+      }
+
+      &:last-child {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: 500px) {
+        margin-bottom: 12px;
+      }
+
       .tab__btn {
         max-width: 142px;
         width: 142px;

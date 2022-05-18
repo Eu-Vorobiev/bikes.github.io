@@ -1,14 +1,94 @@
 .filters {
   min-height: 400px;
   padding: 45px 50px 55px 25px;
-  // border-radius: 0px 6px 0 0;
   display: flex;
   position: relative;
   transition: $transition;
-
+  margin-bottom: 20px;
+  
   @media screen and (max-width: 1150px) {
     justify-content: start;
     padding: 30px 30px 35px 25px;
+  }
+
+  &--profile {
+    min-height: 300px;
+    padding: 25px 18px 5px 25px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    transition: $transition;
+
+    @media screen and (max-width: 475px) {
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+      position: absolute;
+      top: 50px;
+      right: -100%;
+      z-index: 7;
+      padding: 25px 55px 10px;
+      margin-right: 0;
+    }
+
+    &.active {
+      opacity: 1;
+      display: flex;
+      visibility: visible;
+      right: 0;
+     
+      &::before {
+        display: block;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+    .filters__wrap {
+      @media screen and (max-width: 475px) {
+        max-width: 320px;
+      }
+    }
+
+    .accordion {
+      &__item {
+        padding-left: 0;
+        margin-bottom: 15px;
+      }
+
+      &__btn {
+        h4 {
+          font-size: 13.9432px;
+          line-height: 11px;
+        }
+
+        span {
+          top: -4px;
+          left: -22px;
+        }
+      }
+
+      &__info {
+        .label {
+          padding: 4px 0 4px 30px;
+          margin-bottom: 0px;
+          font-size: 11.0278px;
+          line-height: 13px;
+
+        }
+
+        .label+.label {
+          margin-top: 10px;
+        }
+
+        .checkmark {
+          top: 2px;
+          height: 19px;
+          width: 21px;
+        }
+      }
+
+    }
   }
 
 
@@ -33,6 +113,7 @@
     @media screen and (max-width: 1150px) {
       left: 0;
       right: unset;
+      width: 100%;
     }
   }
 

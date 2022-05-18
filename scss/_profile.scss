@@ -2,7 +2,6 @@
 .profile {
   background: rgba(#2F1975, 7);
   padding-bottom: 50px;
-  min-height: 110vh;
 
   @media screen and (max-width: 1150px) {
     padding-bottom: 0;
@@ -10,7 +9,7 @@
   }
 
   @supports ((-webkit-backdrop-filter: blur(70px)) or (backdrop-filter: blur(70px))) {
-    background: linear-gradient(51.42deg, rgba(70, 5, 255, 0.37) 20.98%, rgba(111, 111, 111, 0) 34.13%, rgba(70, 5, 255, 0.32) 46.49%);
+    background: linear-gradient(-70.6deg, rgba(13, 13, 13, 0.37) 4%, rgba(0, 0, 0, 0) 52.96%, rgba(0, 0, 0, 0.32) 98.94%);
     -webkit-backdrop-filter: blur(70px);
     backdrop-filter: blur(70px);
   }
@@ -196,7 +195,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 0;
 
     @media screen and (max-width: 768px) {
       justify-content: start;
@@ -204,10 +203,75 @@
 
     @media screen and (max-width: 500px) {
       flex-wrap: wrap;
-      gap: 12px 8px;
     }
+
     @media screen and (max-width: 475px) {
       justify-content: center;
+    }
+  }
+
+  &__items {
+    display: flex;
+
+    @media screen and (max-width: 475px) {
+      position: relative;
+      padding-top: 50px;
+    }
+  }
+
+  &-aside {
+    &__btn {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 7;
+      transform: translateX(-50%);
+      width: 142px;
+      padding: 15px 55px 13px;
+      font-weight: 400;
+      font-size: 14.2045px;
+      line-height: 12px;
+      text-transform: uppercase;
+      color: $white;
+      background: $violetGradient;
+      border: 1px solid transparent;
+      box-shadow: none;
+      clip-path: polygon(0% 7px,
+          7px 0%,
+          100% 0%,
+          100% 7px,
+          100% calc(100% - 7px),
+          calc(100% - 7px) 100%,
+          7px 100%,
+          0 100%);
+
+      svg {
+        margin-right: 5px;
+        margin-top: -2px;
+        width: 14px;
+        height: 14px;
+        transition: $transition;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $black;
+          background: linear-gradient(to top, $white);
+
+          svg path {
+            stroke: $black;
+          }
+        }
+      }
+
+      @media screen and (max-width: 475px) {
+        opacity: 1;
+        display: flex;
+        visibility: visible;
+      }
     }
   }
 
@@ -291,7 +355,7 @@
       justify-content: space-between;
       gap: 8px;
 
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 992px) {
         justify-content: center;
         flex-wrap: wrap;
       }
@@ -317,6 +381,12 @@
               border: 1px solid transparent;
             }
           }
+        }
+      }
+
+      &:focus-within {
+        .profile__wallet-btn {
+          filter: drop-shadow(0px 4px 18px #00FB91);
         }
       }
     }
@@ -345,11 +415,20 @@
           background: linear-gradient(to top, $white);
         }
       }
+
+      &:focus-within {
+        background: linear-gradient(to top, $white);
+        box-shadow: 0px 4px 28px #00FB91;
+        color: $black;
+      }
     }
   }
 
   &__transactions {
+    padding-bottom: 20px;
+
     @media screen and (max-width: 768px) {
+      padding-bottom: 0px;
       flex-grow: 1;
     }
 
@@ -360,9 +439,14 @@
   }
 
   &__staking {
+    min-height: 40vh;
     padding: 35px 0 50px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 500px) {
+      margin-top: -12px;
+    }
 
     &-invest {
       margin-bottom: 32px;
@@ -371,10 +455,59 @@
       gap: 8px;
       color: $white;
       font-size: clamp(rem(22), 4vw, rem(29.07));
-      
+
       span {
         font-size: clamp(rem(22), 4vw, rem(29.07));
         color: #9D49E0;
+      }
+    }
+
+    &-progress {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      font-size: rem(11);
+      line-height: divider(14px, 11px);
+      color: $white;
+      text-align: center;
+      position: relative;
+
+      .price {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      #bar {
+        width: 100%;
+        height: 1px;
+        background: $white;
+        box-shadow: 0px 0px 4px #4605FF;
+      }
+
+      #progress {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        transform: translateY(-50%);
+        width: 70%;
+        height: 5px;
+        background: #9D49E0;
+        box-shadow: 0px 0px 4px #4605FF, 0px 0px 4px #4605FF;
+
+        &::before {
+          content: '';
+          position: absolute;
+          right: -6px;
+          top: -3px;
+          z-index: 2;
+          width: 12px;
+          height: 12px;
+          background: $white;
+          box-shadow: inherit;
+        }
       }
     }
   }

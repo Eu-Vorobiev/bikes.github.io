@@ -30,6 +30,7 @@
     @media screen and (max-width: 1150px) {
       left: 0;
       right: unset;
+      width: 100%;
     }
   }
 
@@ -133,10 +134,125 @@
     }
   }
 
+  &__card {
+    width: 100% !important;
+
+    @media (any-hover: hover) {
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 4px 20px #00FFD1;
+        transform: translateY(-5px);
+      }
+    }
+
+    .catalog-card__inner {
+      padding: 18px 10px 15px;
+
+      // @media screen and (max-width: 450px) {
+      //   padding: 15px 10px 20px;
+      // }
+
+      img {
+        max-height: 115px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .catalog-card__license {
+      padding: 5px 8px;
+      margin-bottom: 2px;
+      font-size: 6px;
+      line-height: 1.1;
+      clip-path:
+        polygon(0% 3px,
+          3px 0%,
+          100% 0%,
+          100% 3px,
+          100% calc(100% - 3px),
+          calc(100% - 3px) 100%,
+          3px 100%,
+          0 100%);
+
+    }
+
+    .catalog-card__heading {
+      margin-bottom: 6px;
+    }
+
+    .catalog-card__type {
+      font-size: 6px;
+      line-height: 1.1;
+      padding: 3px;
+      box-shadow: 0px 3px 18px transparent;
+
+      b {
+        font-size: 8px;
+        line-height: 1.1;
+
+      }
+    }
+
+    .catalog-card__title {
+      padding: 3px 4px;
+      font-size: 6px;
+      line-height: 1.1;
+      margin-bottom: 1px;
+      clip-path:
+        polygon(0% 3px,
+          3px 0%,
+          100% 0%,
+          100% 3px,
+          100% calc(100% - 3px),
+          calc(100% - 3px) 100%,
+          3px 100%,
+          0 100%);
+
+      @media screen and (max-width: 400px) {
+        padding: 3px 3px 4px 7px;
+        font-size: 4.00924px;
+        line-height: 5px;
+      }
+
+      h4 {
+        font-size: 7px;
+        line-height: 1;
+        letter-spacing: 0.15em;
+
+        @media screen and (max-width: 400px) {
+          font-size: 8.33544px;
+          line-height: 7px;
+        }
+      }
+    }
+
+    .catalog-card__info {
+      gap: 3px;
+
+      p {
+        font-size: 9px;
+        line-height: 1.1;
+
+        b {
+          font-size: 10px;
+          line-height: inherit;
+
+          &::after {
+            top: 1px;
+            left: -4px;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          font-size: 6.30024px;
+          line-height: 8px;
+        }
+      }
+    }
+  }
+
   &__btn {
     &-wrap {
       display: flex;
-      flex-grow: 1;
       filter: drop-shadow(0px 0px 6px $darkViolet);
     }
 

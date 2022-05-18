@@ -1,5 +1,5 @@
 .cryptobox {
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 
   @media screen and (max-width: 768px) {
     padding-bottom: 50px;
@@ -29,13 +29,13 @@
 
   &__wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 72px 130px;
+    margin-right: -20px;
     position: relative;
 
     @media screen and (max-width: 1200px) {
-      gap: 72px 20px;
+      margin-right: 0px;
       justify-content: space-around;
     }
 
@@ -43,7 +43,6 @@
       overflow-x: scroll;
       justify-content: start;
       flex-wrap: nowrap;
-      gap: 35px;
       padding: 90px 0 40px;
     }
 
@@ -60,10 +59,30 @@
 
   &-modal {
     .modal-item {
+      grid-template-columns: .9fr 1fr;
+      align-items: flex-start;
       padding: 60px 30px 30px;
+      gap: 40px 110px;
+
+      @media screen and (max-width: 991px) {
+        padding: 60px 30px 30px;
+        gap: 40px 60px;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 50px 30px 30px;
+        gap: 40px;
+      }
 
       @media screen and (max-width: 420px) {
+        gap: 25px;
         padding: 60px 12px 20px;
+      }
+
+      @media screen and (max-width: 420px) and (max-height: 890px) {
+        gap: 20px;
       }
 
       @media screen and (max-width: 360px) {
@@ -86,18 +105,27 @@
     .modal-item__image {
       img {
         margin-top: 0;
-        flex-grow: 0;
+        flex-grow: 1;
         min-width: 345px;
-        max-width: 495px;
         filter: drop-shadow(0px 4.91096px 30px rgba(0, 251, 191, 0.63));
-        border-radius: 15px;
+        height: 350px;
+        min-height: unset;
+
+        @media screen and (max-width: 1100px) {
+          height: auto;
+        }
 
         @media screen and (max-width: 991px) {
           min-width: 275px;
         }
 
+        @media screen and (max-width: 768px) {
+          max-width: 375px;
+        }
+
         @media screen and (max-width: 475px) {
           min-width: 220px;
+          max-width: 100%;
         }
 
         @media screen and (max-width: 420px) and (max-height: 740px) {

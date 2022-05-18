@@ -6,6 +6,10 @@
       padding-bottom: 120px;
       margin: 0 -35px;
 
+      @media screen and (max-width: 600px) {
+        padding-top: 30px;
+      }
+
       .catalog-bikes-pagination {
         max-width: 200px;
         bottom: 60px;
@@ -48,6 +52,14 @@
         padding-top: 20px;
         padding-bottom: 110px;
         margin: 0 -22px;
+
+        @media screen and (max-width: 600px) {
+          padding-top: 20px;
+        }
+
+        @media screen and (max-width: 500px) {
+          margin: -12px -22px 0;
+        }
       }
     }
 
@@ -85,20 +97,25 @@
       gap: 20px 10px;
 
       @media screen and (max-width: 800px) {
-        justify-content: space-evenly;
+        grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+        justify-content: space-between;
+      }
+
+      @media screen and (max-width: 590px) {
+        grid-template-columns: 1fr 1fr;
       }
 
       &--sm {
         margin: 0 22px;
-        gap: 10px 8px;
-        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+        gap: 20px 10px;
+        grid-template-columns: 1fr 1fr;
 
-        @media screen and (max-width: 768px) {
-          gap: 20px 8px;
+        @media screen and (max-width: 1150px) {
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }
 
-        @media screen and (max-width: 475px) {
-          justify-content: center;
+        @media screen and (max-width: 450px) {
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         }
       }
     }
@@ -109,6 +126,10 @@
       padding-top: 60px;
       padding-bottom: 120px;
       margin: 0 -35px;
+
+      @media screen and (max-width: 600px) {
+        padding-top: 30px;
+      }
 
       .catalog-items-pagination {
         max-width: 200px;
@@ -152,6 +173,14 @@
         padding-top: 20px;
         padding-bottom: 110px;
         margin: 0 -22px;
+
+        @media screen and (max-width: 600px) {
+          padding-top: 20px;
+        }
+
+        @media screen and (max-width: 500px) {
+          margin: -12px -22px 0;
+        }
       }
     }
 
@@ -189,7 +218,12 @@
       gap: 20px 10px;
 
       @media screen and (max-width: 800px) {
-        justify-content: space-evenly;
+        grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+        justify-content: space-between;
+      }
+
+      @media screen and (max-width: 590px) {
+        grid-template-columns: 1fr 1fr;
       }
 
       &--sm {
@@ -198,11 +232,18 @@
         grid-template-columns: repeat(auto-fit, minmax(140px, auto));
 
         @media screen and (max-width: 768px) {
+          grid-template-columns: 1fr 1fr 1fr;
           gap: 20px 8px;
         }
 
+        @media screen and (max-width: 660px) {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      &--profile {
         @media screen and (max-width: 475px) {
-          justify-content: center;
+          justify-content: space-evenly;
         }
       }
     }

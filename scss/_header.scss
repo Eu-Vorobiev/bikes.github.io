@@ -36,12 +36,12 @@
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 10px;
   }
 
   &__account {
     width: 62px;
     height: 59px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,6 +73,12 @@
 
     &.active {
       box-shadow: 0px 3px 38px #4605FF;
+    }
+  }
+  &__wallet {
+    gap: 0;
+    .wallet__info {
+      margin-right: 10px;
     }
   }
 }

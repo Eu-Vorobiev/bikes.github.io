@@ -1,4 +1,4 @@
-input[type="range"] {
+input.range {
   -webkit-appearance: none;
   margin-right: 15px;
   max-width: 300px;
@@ -12,17 +12,17 @@ input[type="range"] {
   filter: drop-shadow(0px 0px 4px $darkViolet);
 }
 
-input[type="range"].staking__item-range {
+input.range.staking__item-range {
   max-width: 240px;
   margin-right: 0;
 }
 
-input[type="range"].target__input-range {
+input.range.target__input-range {
   max-width: 100%;
   margin-right: 0;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input.range::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 12px;
   width: 12px;
@@ -35,7 +35,7 @@ input[type="range"]::-webkit-slider-thumb {
   filter: drop-shadow(0px 0px 8px transparent);
 }
 
-input[type="range"]::-moz-range-thumb {
+input.range::-moz-range-thumb {
   -webkit-appearance: none;
   height: 12px;
   width: 12px;
@@ -48,7 +48,7 @@ input[type="range"]::-moz-range-thumb {
   filter: drop-shadow(0px 0px 4px transparent);
 }
 
-input[type="range"]::-ms-thumb {
+input.range::-ms-thumb {
   -webkit-appearance: none;
   height: 12px;
   width: 12px;
@@ -61,24 +61,34 @@ input[type="range"]::-ms-thumb {
   filter: drop-shadow(0px 0px 4px transparent);
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input.range::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;
   background: transparent;
 }
 
-input[type=range]::-ms-track {
+input.range::-ms-track {
   width: 100%;
   cursor: pointer;
 }
 
-input[type=range]::-ms-fill-lower {
+input.range::-ms-fill-lower {
   background: $white;
 }
 
-input[type=range]::-ms-fill-upper {
+input.range::-ms-fill-upper {
   background: $violetGradient;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .range-value {
@@ -104,7 +114,7 @@ input[type=range]::-ms-fill-upper {
         <input type="number" id="rangevalue" value="10" oninput="range.value=value">
 
 
-  const rangeInputs = document.querySelectorAll('input[type="range"]');
+  const rangeInputs = document.querySelectorAll('input.range');
   const numberInput = document.querySelector('input[type="number"]');
   if (rangeInputs) {
     function handleInputChange(e) {

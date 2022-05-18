@@ -93,7 +93,8 @@
           community treasury .
         </p>
         <div class="staking__wrap">
-          <svg class="move-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="move-icon" width="48" height="48" viewBox="0 0 48 48" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M21.9988 43C17.2728 41.233 13.3308 35.185 11.3588 31.643C10.5068 30.113 10.9558 28.235 12.3228 27.141C13.0588 26.5525 13.9859 26.256 14.9268 26.3082C15.8678 26.3604 16.7564 26.7577 17.4228 27.424L18.9988 29V17.5C18.9988 16.837 19.2622 16.2011 19.731 15.7322C20.1998 15.2634 20.8357 15 21.4988 15C22.1618 15 22.7977 15.2634 23.2665 15.7322C23.7354 16.2011 23.9988 16.837 23.9988 17.5V23.5C23.9988 22.837 24.2622 22.2011 24.731 21.7322C25.1998 21.2634 25.8357 21 26.4988 21C27.1618 21 27.7977 21.2634 28.2665 21.7322C28.7354 22.2011 28.9988 22.837 28.9988 23.5V25.5C28.9988 24.837 29.2622 24.2011 29.731 23.7322C30.1998 23.2634 30.8357 23 31.4988 23C32.1618 23 32.7977 23.2634 33.2665 23.7322C33.7354 24.2011 33.9988 24.837 33.9988 25.5V27.5C33.9988 26.837 34.2622 26.2011 34.731 25.7322C35.1998 25.2634 35.8357 25 36.4988 25C37.1618 25 37.7977 25.2634 38.2665 25.7322C38.7354 26.2011 38.9988 26.837 38.9988 27.5V35.368C38.9988 36.438 38.7338 37.496 38.1168 38.371C37.0938 39.82 35.2538 42.034 32.9988 43C29.4988 44.5 26.3688 44.634 21.9988 43Z"
               stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
@@ -117,14 +118,24 @@
               <h1 class="staking__item-number">1<span>st</span></h1>
               <div class="staking__item-contract">contract<br>
                 for 6 months - <span>3%</span></div>
-              <label class="staking__item-invest" for="invest1st">
+                <div class="staking__item-invest" id="invest1st">
+                  your investment
+                  <div class="wrap">
+                    <div class="inner">
+                      <span id="min">0$</span>
+                      <p id="current"><span>7</span> mln $</p>
+                    </div>
+                    <div class="staking__item-progress">
+                      <span id="bar"></span>
+                      <span id="progress" style="width: 70%"></span>
+                    </div>
+                  </div>
+                </div>
+              <label class="staking__item-invest staking__item-inputLabel" for="inves1st">
                 your investment
-                <input class="range staking__item-range" type="range" value="5.0" min="0.1" max="10.0" id="invest1st"
-                  step="0.1" oninput="rangevalue.value=invest1st.value" />
-                <span>
-                  <input class="range-value" type="text" id="rangevalue" value="5.0">
-                  bnb
-                </span>
+                <input class="btn staking__item-textInput" type="text" name="invest1st" id="invest1st"
+                  placeholder="Type amount">
+                <p>min 100$ investment</p>
               </label>
             </div>
             <div class="staking__item-btnWrap">
@@ -148,14 +159,24 @@
               <h1 class="staking__item-number">2<span>nd</span></h1>
               <div class="staking__item-contract">contract<br>
                 for 18 months - <span>6%</span></div>
-              <label class="staking__item-invest" for="invest2nd">
+                <div class="staking__item-invest" id="invest2nd">
+                  your investment
+                  <div class="wrap">
+                    <div class="inner">
+                      <span id="min">0$</span>
+                      <p id="current"><span>4</span> mln $</p>
+                    </div>
+                    <div class="staking__item-progress">
+                      <span id="bar"></span>
+                      <span id="progress" style="width: 40%"></span>
+                    </div>
+                  </div>
+                </div>
+              <label class="staking__item-invest staking__item-inputLabel" for="invest2nd">
                 your investment
-                <input class="range staking__item-range" type="range" value="5.0" min="0.1" max="10.0" id="invest2nd"
-                  step="0.1" oninput="rangevalue2.value=invest2nd.value" />
-                <span>
-                  <input class="range-value" type="text" id="rangevalue2" value="5.0">
-                  bnb
-                </span>
+                <input class="btn staking__item-textInput" type="text" name="invest2nd" id="invest2nd"
+                  placeholder="Type amount">
+                <p>min 100$ investment</p>
               </label>
             </div>
             <div class="staking__item-btnWrap">
@@ -179,14 +200,24 @@
               <h1 class="staking__item-number">3<span>rd</span></h1>
               <div class="staking__item-contract">contract<br>
                 for 36 months - <span>10%</span></div>
-              <label class="staking__item-invest" for="invest3rd">
+              <div class="staking__item-invest" id="invest3rd">
                 your investment
-                <input class="range staking__item-range" type="range" value="5.0" min="0.1" max="10.0" id="invest3rd"
-                  step="0.1" oninput="rangevalue3.value=invest3rd.value" />
-                <span>
-                  <input class="range-value" type="text" id="rangevalue3" value="5.0">
-                  bnb
-                </span>
+                <div class="wrap">
+                  <div class="inner">
+                    <span id="min">0$</span>
+                    <p id="current"><span>5</span> mln $</p>
+                  </div>
+                  <div class="staking__item-progress">
+                    <span id="bar"></span>
+                    <span id="progress" style="width: 50%"></span>
+                  </div>
+                </div>
+              </div>
+              <label class="staking__item-invest staking__item-inputLabel" for="invest3rd">
+                your investment
+                <input class="btn staking__item-textInput" type="text" name="invest3rd" id="invest3rd"
+                  placeholder="Type amount">
+                <p>min 100$ investment</p>
               </label>
             </div>
             <div class="staking__item-btnWrap">
@@ -221,7 +252,7 @@
 
   <div class="overlay"></div>
 
-  <script src="js/main.js"></script>
+  <script src="js/basic.js"></script>
 </body>
 
 </html>

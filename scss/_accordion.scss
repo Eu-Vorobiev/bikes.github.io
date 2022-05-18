@@ -4,6 +4,42 @@
     flex-direction: column;
     margin-bottom: 20px;
     padding-left: 20px;
+    cursor: pointer;
+    transition: $transition;
+
+    &.open {
+      .accordion__info {
+        height: 100%;
+        padding-top: 18px;
+        opacity: 1;
+      }
+
+      .accordion__btn {
+        h4 {
+          color: #00FFD1;
+        }
+      }
+    }
+
+    &.close {
+      .accordion__info {
+        opacity: 0;
+        height: 0;
+      }
+    }
+
+    &:hover {
+      .accordion__btn {
+        h4 {
+          color: #00FFD1;
+        }
+
+        span {
+          top: 1px;
+          transform: rotate(90deg);
+        }
+      }
+    }
   }
 
   &__btn {
@@ -43,24 +79,12 @@
       height: 14px;
       transition: $transition;
     }
-
-    &.active {
-      span {
-        top: 1px;
-        transform: rotate(90deg);
-      }
-    }
   }
 
   &__info {
     margin-bottom: 13px;
-    max-height: 0;
     overflow: hidden;
     transition: $transition;
-
-    &.shown {
-      padding: 18px 0 0;
-    }
 
     &.ml {
       margin-left: -25px;

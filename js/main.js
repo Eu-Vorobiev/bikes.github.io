@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let header = document.querySelector(".header"); 
+  let overlay = document.querySelector(".overlay");
   let cryptoItemBtns = document.querySelectorAll(".crypto-item__btn");
   let catalogCards = document.querySelectorAll("#catalog-card");
   let profileCards = document.querySelectorAll("#profile-card");
@@ -6,58 +8,31 @@ document.addEventListener("DOMContentLoaded", function () {
   let cardBuyModal = document.querySelector("#buy-modal");
   let cardSellModal = document.querySelector("#sell-modal");
   let modalClose = document.querySelector("#modal-close");
-  let menu = document.querySelector(".nav");
-  let menuBtn = document.querySelector(".menu-btn");
-  let overlay = document.querySelector(".overlay");
-  let header = document.querySelector(".header");
   let filterBtn = document.querySelectorAll(".accordion__btn");
+  let filterItem = document.querySelectorAll(".accordion__item");
   let asideBtn = document.querySelector("#aside-btn");
   let aside = document.querySelector(".marketplace__aside");
-
-  menuBtn.addEventListener("click", function () {
-    this.classList.toggle("active");
-    menu.classList.toggle("active");
-    header.classList.toggle("b-bottom");
-    overlay.classList.toggle("active");
-    overlay.classList.remove("filter-page");
-    if (menu.classList.contains("active")) {
-      disableScroll();
-    } else {
-      enableScroll();
-    }
-    if (aside && aside.classList.contains("active")) {
-      aside.classList.remove("active");
-      overlay.classList.add("active");
-    };
-  });
-
-  const disableScroll = () => {
-    const scrollBarWidth = window.innerWidth - document.body.offsetWidth;
-    document.body.dataset.scrollY = window.scrollY;
-    document.body.style.cssText = `
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: ${-(window.scrollY)}px;
-        overflow: hidden;
-        padding-right: ${(scrollBarWidth) + 2}px;
-        `;
-        header.style.cssText = `
-        width: 99.989%;
-        `;
-      };
-      
-  const enableScroll = () => {
-    document.body.style.cssText = '';
-    header.style.cssText = '';
-    window.scroll({
-      top: document.body.dataset.scrollY
-    });
-    document.body.dataset.scrollY = '';
-  };
+  let asideProfile = document.querySelector(".filters--profile");
 
   // Accordion
   if (filterBtn) {
+    for (i = 0; i < filterItem.length; i++) {
+      filterItem[i].className = 'accordion__item close';
+      filterItem[0].className = 'accordion__item open';
+    }
+
+    function toggleItem() {
+      let itemClass = this.parentNode.className;
+      if (itemClass == 'accordion__item close') {
+        this.parentNode.className = 'accordion__item open';
+      } else {
+        this.parentNode.className = 'accordion__item close';
+      }
+    }
+    for (i = 0; i < filterBtn.length; i++) {
+      filterBtn[i].addEventListener('click', toggleItem);
+    }
+
     for (let i = 0; i < filterBtn.length; i++) {
       filterBtn[i].addEventListener("click", function () {
         this.classList.toggle("active");
@@ -66,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
           filterInfo.style.maxHeight = null;
           filterInfo.classList.remove("shown");
         } else {
-          filterInfo.style.maxHeight = filterInfo.scrollHeight + "px";
+          filterInfo.style.maxHeight = (filterInfo.scrollHeight + 20) + "px";
           filterInfo.classList.add("shown");
         }
       });
@@ -80,6 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay.classList.toggle("active");
       overlay.classList.toggle("filter-page");
     });
+  }
+
+  if (asideProfile) {
+    asideBtn.addEventListener("click", function () {
+      asideProfile.classList.toggle("active");
+      overlay.classList.toggle("active");
+      overlay.classList.toggle("filter-page");
+    })
   }
 
   // Counter
@@ -115,8 +98,11 @@ document.addEventListener("DOMContentLoaded", function () {
     btnArray.forEach(btn => {
       btn.addEventListener("click", function () {
         modal.classList.add("visible");
-        disableScroll();
-        // document.body.classList.add("no-scroll");
+        header.style.cssText = `
+          padding-right: 1px;
+        `;
+        document.body.classList.add("no-scroll");
+        // disableScroll();
       });
     });
   }
@@ -130,8 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
       modalClose.addEventListener("click", function () {
         if (modal) {
           modal.classList.remove("visible");
-          enableScroll();
-          // document.body.classList.remove("no-scroll");
+          // enableScroll();
+          header.style.cssText = `
+          `;
+          document.body.classList.remove("no-scroll");
         }
       });
     }
@@ -139,8 +127,10 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       if (e.key === "Escape" && modal) {
         modal.classList.remove("visible");
-        enableScroll();
-        // document.body.classList.remove("no-scroll");
+        // enableScroll();
+        header.style.cssText = `
+        `;
+        document.body.classList.remove("no-scroll");
       }
     })
   }
@@ -179,14 +169,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Range Inputs
-  const rangeInputs = document.querySelectorAll('input[type="range"]');
+  const rangeInputs = document.querySelectorAll('input.range');
 
   if (rangeInputs) {
     function handleInputChange(e) {
       let target = e.target
-      if (e.target.type !== 'range') {
-        target = document.getElementById('range')
-      }
+      // if (e.target.type !== 'range') {
+      //   target = document.getElementById('range')
+      // }
       const min = target.min
       const max = target.max
       const val = target.value
@@ -194,46 +184,46 @@ document.addEventListener("DOMContentLoaded", function () {
       target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 5px';
     }
 
-    rangeInputs.forEach(input => {
+    rangeInputs.forEach(function (input) {
       input.addEventListener('input', handleInputChange);
     });
   }
+
+  // Catalog Slider
+  let swiperBikes = document.querySelector(".catalog-bikes__slider");
+
+  if (swiperBikes) {
+    swiperBikesSlider = new Swiper(swiperBikes, {
+      loop: true,
+
+      pagination: {
+        el: '.catalog-bikes-pagination',
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: '.catalog-bikes__slider-nextBtn',
+        prevEl: '.catalog-bikes__slider-prevBtn',
+      },
+
+    });
+  }
+
+  let swiperItems = document.querySelector(".catalog-items__slider");
+  if (swiperItems) {
+    swiperItemsSlider = new Swiper(swiperItems, {
+      loop: true,
+
+      pagination: {
+        el: '.catalog-items-pagination',
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: '.catalog-items__slider-nextBtn',
+        prevEl: '.catalog-items__slider-prevBtn',
+      },
+
+    });
+  }
 });
-
-// Catalog Slider
-let swiperBikes = document.querySelector(".catalog-bikes__slider");
-
-if (swiperBikes) {
-  swiperBikesSlider = new Swiper(swiperBikes, {
-    loop: true,
-
-    pagination: {
-      el: '.catalog-bikes-pagination',
-      clickable: true,
-    },
-
-    navigation: {
-      nextEl: '.catalog-bikes__slider-nextBtn',
-      prevEl: '.catalog-bikes__slider-prevBtn',
-    },
-
-  });
-}
-
-let swiperItems = document.querySelector(".catalog-items__slider");
-if (swiperItems) {
-  swiperItemsSlider = new Swiper(swiperItems, {
-    loop: true,
-
-    pagination: {
-      el: '.catalog-items-pagination',
-      clickable: true,
-    },
-
-    navigation: {
-      nextEl: '.catalog-items__slider-nextBtn',
-      prevEl: '.catalog-items__slider-prevBtn',
-    },
-
-  });
-}

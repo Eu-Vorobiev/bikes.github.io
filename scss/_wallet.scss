@@ -1,7 +1,6 @@
 .wallet {
   display: flex;
   align-items: center;
-  gap: 10px;
 
   @media screen and (max-width: 500px) {
     display: none;
@@ -10,11 +9,11 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 3px;
     text-align: right;
   }
 
   b {
+    margin-top: 3px;
     display: flex;
     align-items: center;
     font-family: $title-font;
